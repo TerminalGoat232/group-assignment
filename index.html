@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>A1 project idk</title>
     <link href="style.css" rel="stylesheet">
-  </head>
+ 
   <style>   
     .hero_ctn {
       padding: 8rem 2rem; 
       position: flex;
     }
+
     p {
       color: var(--ef-fg);
     }
+
+    .nf {
+      font-size: 4em;
+      padding: 0.3em 0.2em;
+      border-radius:25px; 
+      transition: color 0.2s ease;
+
+    }
+    
+    .nf:hover {
+      color:var(--ef-bg2);
+      transition: color 0.2s ease;
+    }
+
   </style>
   <body>
     <header>
@@ -27,13 +42,14 @@
 
         <div class = "bg-overlay">
           <section class="hero_ctn">
-            <p style="font-size: 3rem; font-weight:600; color:var(--ef-bg4);">
+            <p style="font-size: 4.5rem; font-weight:600; color:var(--ef-bg4);">
               Powering communities with 
               <span 
                 style="all: inherit; 
                 background-color:var(--ef-green); 
                 width: fit-content;
-                padding: 0 0.2em;
+                padding: 0.1em 0.2em;
+                border-radius: 10px;
                 font-style:italic">
                 clean energy
               </span>
@@ -42,19 +58,30 @@
         </div>
      
     </header>
-
-    <div class="content-ctn">
-        <p> We design, build, and operate renewable energy infrastructure
-          globally, from rooftop solar, utility-scale wind, to nuclear power plant
-          - with the technology to keep it all running.</p>
-        <br>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
-    </div>
-
-    <footer>
-      <a href="https://student-team-aas2h8hq.atlassian.net/jira/software/projects/KAN/boards/1?filter=&groupBy=none&atlOrigin=eyJpIjoiZWYzYWZmYTBiNzQ3NDVjMjk1ZGU0ZjkwNWIyZmEzYTAiLCJwIjoiaiJ9">Jira Project</a> |
-      <a href="https://github.com/terminalgoat232/group-assignment">GitHub</a> |
-      <a href="mailto:info@g03energy.com">info@tablysusenerg.com</a>
-    </footer>
+    <main>
+      <div class="content-ctn">
+        <div class="desc-ctn">
+          <h1> What can we do? </h1>
+            <p> We design, build, and operate renewable energy infrastructure
+              globally, from rooftop solar, utility-scale wind, to nuclear power plant
+              with the technology to keep it all running.</p>
+        </div>
+        <div class="dummy"></div>
+        <div class="energ-type-ctn">
+          <i style="background-color:var(--ef-cyan)" class="nf nf-md-wind_power_outline"></i>
+          <i style="background-color:var(--ef-orange)" class="nf nf-md-solar_power_variant_outline"></i>
+          <i style="background-color:var(--ef-blue)" class="nf nf-md-waterfall"></i>
+          <i style="background-color:var(--ef-green)" class="nf nf-fae-radioactive"></i>
+        </div>
+          <br>
+      </div>
+    </main>
   </body>
+
+  <footer>
+    <a href="https://student-team-aas2h8hq.atlassian.net/jira/software/projects/KAN/boards/1?filter=&groupBy=none&atlOrigin=eyJpIjoiZWYzYWZmYTBiNzQ3NDVjMjk1ZGU0ZjkwNWIyZmEzYTAiLCJwIjoiaiJ9">Jira Project</a> |
+    <a href="https://github.com/terminalgoat232/group-assignment">GitHub</a> |
+    <a href="mailto:info@g03energy.com">info@susnium.com</a>
+  </footer>
+
 </html>

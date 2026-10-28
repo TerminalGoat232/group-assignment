@@ -1,35 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 @import "colorscheme.css";
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
 
 * {
   margin: 0;
   padding: 0;
-  color: var(--ef-fg);
   box-sizing: border-box;
   font-family:"IBM Plex Mono", monospace;
-  font-size: 24px;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  color: var(--ef-red);
 }
 
 body {
+  font-size: 1.25rem; 
   background-color: var(--ef-bg0);
   display: grid;
+  grid-template-rows:auto 1fr auto;
+  min-height:100vh;
 }
 
 nav {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
   text-align: center;
-  diplay: flex;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
   background-color: var(--ef-bg3);
 }
 
 nav a {
-  padding: 0.2em;
+  padding: 0.4em 0.6em;
   color: var(--ef-fg-dim);
   text-decoration: underline;
   text-decoration-color: transparent;
-  transition: text-decoration-color 0.3s ease;
+  transition: text-decoration-color 0.5s ease, color 0.2s ease;
+  font-size:1em; 
 }
 
 nav a:hover {
@@ -44,12 +56,11 @@ nav a[aria-current="page"] {
 }
 
 footer {
-  padding-top: 1em;
-  padding-bottom:1em;
+  padding: 1em 1em;
   text-align:center;
   background-color: var(--ef-fg);
   color: var(--ef-bg5);
-  font-size: 13px !important;
+  font-size: 0.8125rem !important;
 }
 
 footer > a {
@@ -69,13 +80,32 @@ footer > a {
 }
 
 .content-ctn {
-  padding: 0.5rem 0.5rem; 
+  justify-content: center;
+  font-size: 1.5em;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.desc-ctn {
+  background-color: var(--ef-bg1);
+  max-width:700px;
+  padding: 1em 1em;
+  border-radius: 10px;
+  border: 2px solid var(--ef-bg2);
+ }
+
+.dummy {
+  padding: 1em 3rem;
+}
+
+.energ-type-ctn {
+  padding: 2em;
+}
 
 @media (max-width: 1000px) {
     body {
-        display: block;
+        display: grid;
     }
 
     #left-window, 
@@ -85,8 +115,22 @@ footer > a {
 }
 
 @media (max-width: 680px) {
-    body {
-        font-size: 13px;
-    }
+  html {
+    font-size: 14px; /* scales ALL rem units down uniformly */
+  }
+
+  nav {
+    gap: 0;
+    padding: 0.25rem 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+    padding: 0.5em 0.5em; /* larger tap target on small screens */
+  }
+
+  .content-ctn {
+    padding: 0.75rem 0.5rem;
+  }
 }
 
