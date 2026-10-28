@@ -57,6 +57,22 @@ footer > a {
   font-size: inherit;
 }
 
+.bg-overlay {
+  background-image:
+    linear-gradient(          
+      rgba(0, 0, 0, 0.8),
+      rgba(255, 255, 255, 0.1) 
+
+    ), url('images/hero_bg_overlay.jpeg');
+  background-size: cover;
+  background-position: bottom;    
+}
+
+.content-ctn {
+  padding: 0.5rem 0.5rem; 
+}
+
+
 @media (max-width: 1000px) {
     body {
         display: block;
