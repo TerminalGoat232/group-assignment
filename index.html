@@ -4,16 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>A1 project idk</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
+  <style>
+    .bg-overlay {
+      background-image:
+        linear-gradient(          
+          rgba(0, 0, 0, 0.4),
+          rgba(255, 255, 255, 0.1) 
+
+        ), url('images/hero_bg_overlay.jpeg');
+      background-size: cover;
+      background-position: bottom;    
+    }
+
+    .content-ctn {
+      padding: 0.5rem 0.5rem; 
+    }
+    
+  </style>
   <body>
-    <nav>
-      <a href="about.html">About us</a>
-      <a href="apply.html">Join us</a>
-      <a href="jobs.html">Career</a>
-    </nav>
+    <header>
+      <nav>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html" >About us</a>
+        <a href="apply.html">Join us</a>
+        <a href="jobs.html">Career</a>
+      </nav>
+    </header>
+
+    <div class = "bg-overlay">
+      <div class="content-ctn">
+        <p style="font-size: 3rem; font-weight:600; color:var(--ef-yellow);">
+          Powering communities with 
+          <span style="all: inherit; color:var(--ef-cyan); font-style:italic">
+            clean energy
+          </span>
+        </p>
+        <br>
+        <p style="background-color:var(--ef-bg3);border-radius:10px;"> We design, build, and operate renewable energy infrastructure
+          globally, from rooftop solar, utility-scale wind, to nuclear power plant
+          - with the technology to keep it all running.</p>
+        <br>
+        <p style="background-color:var(--ef-bg3);border-radius:10px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+      </div>
+    </div>
+    <footer>
+      <a href="https://student-team-aas2h8hq.atlassian.net/jira/software/projects/KAN/boards/1?filter=&groupBy=none&atlOrigin=eyJpIjoiZWYzYWZmYTBiNzQ3NDVjMjk1ZGU0ZjkwNWIyZmEzYTAiLCJwIjoiaiJ9">Jira Project</a> |
+      <a href="https://github.com/group-assignment">GitHub</a> |
+      <a href="mailto:info@g03energy.com">info@tablysusenerg.com</a>
+    </footer>
   </body>
-  <footer>
-    <p>this is a footer idk</p> 
-  </footer>
 </html>
