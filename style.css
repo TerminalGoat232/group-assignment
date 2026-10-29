@@ -95,10 +95,11 @@ footer > a {
 
 .bg-overlay {
   background-image:
-    linear-gradient(          
-      rgba(0, 0, 0, 0.8),
-      rgba(255, 255, 255, 0.1) 
-
+    linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.60) 45%,
+      rgba(0, 0, 0, 0.15) 100%
     ), url('images/hero_bg_overlay.jpeg');
   background-size: cover;
   background-position: bottom;    
@@ -147,7 +148,7 @@ footer > a {
 
 .sv-label {
   background-color: var(--ef-yellow);
-  color: var(--ef-bg1);
+  color: var(--ef-bg0);
   width: 100%;
   text-align: center;
   padding: 0.6em 0em;
@@ -199,7 +200,7 @@ td, th{
 }
 
 thead {
-  color: var(--ef-bg1);
+  color: var(--ef-bg0);
   background-color: var(--ef-blue);
 }
 
