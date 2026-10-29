@@ -17,12 +17,21 @@ h1 {
   color: var(--ef-red);
 }
 
+h2 {
+  color: var(--ef-bg1);
+}
+
 body {
   font-size: 1.25rem; 
   background-color: var(--ef-bg0);
   display: grid;
   grid-template-rows:auto 1fr auto;
   min-height:100vh;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ef-green);
+  outline-offset: 3px;
 }
 
 nav {
@@ -59,8 +68,8 @@ footer {
   padding: 1em 1em;
   text-align:center;
   background-color: var(--ef-fg);
-  color: var(--ef-bg5);
-  font-size: 0.8125rem !important;
+  color: var(--ef-bg4);
+  font-size: 0.875rem;
 }
 
 footer > a {
@@ -79,12 +88,16 @@ footer > a {
   background-position: bottom;    
 }
 
+/* main no longer forces two equal grid rows (it only has one block now,
+   so the second row was just empty space) */
+
 .content-ctn {
   justify-content: center;
   font-size: 1.5em;
-  padding: 3rem 2rem;
+  padding: 8rem 2rem;
   display: flex;
   flex-wrap: wrap;
+  row-gap: 2rem;          /* stops wrapped items touching each other */
 }
 
 .desc-ctn {
@@ -95,12 +108,70 @@ footer > a {
   border: 2px solid var(--ef-bg2);
  }
 
-.dummy {
-  padding: 1em 3rem;
-}
 
 .energ-type-ctn {
-  padding: 2em;
+  margin: 2rem 3em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+  list-style: none;
+}
+
+.tile {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rt-sol-txt {
+  color: var(--ef-orange);
+}
+
+.wind-txt {
+  color: var(--ef-cyan)
+}
+
+.water-txt {
+  color: var(--ef-blue)
+}
+
+.nu-txt{
+  color: var(--ef-green)
+}
+
+.sv-label {
+  background-color: var(--ef-yellow);
+  width: 100%;
+  text-align: center;
+  padding: 0.6em 0em;
+}
+
+/* Image row: centred on its own line */
+.content-ctn figure {
+  flex: 0 1 80rem;        /* up to 80rem wide, shrinks on small screens */
+  max-width: 100%;
+  margin-inline: auto;    /* auto side margins centre it */
+  padding: 3em;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-inline: auto;
+  border-radius: 40px;
+}
+
+figcaption {
+  margin-top: 0.5em;
+  text-align: center;
+  font-size: 0.7em;
+  font-style: italic;
 }
 
 @media (max-width: 1000px) {
@@ -126,11 +197,39 @@ footer > a {
 
   nav a {
     font-size: 0.85rem;
-    padding: 0.5em 0.5em; /* larger tap target on small screens */
+    padding: 0.6em 0.5em; /* larger tap target on small screens */
   }
 
   .content-ctn {
-    padding: 0.75rem 0.5rem;
+    font-size: 1em;        /* was 1.5em, which made everything huge on phones */
+    padding: 1.5rem 1rem;
+    row-gap: 1.5rem;
+  }
+
+  .desc-ctn {
+    padding: 1rem;
+  }
+
+  /* Four tiles in one row, with a real gap under the card */
+  .energ-type-ctn {
+    width: 100%;
+    margin: 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  /* .energ-type-ctn .tile beats the embedded .nf rule in index.html */
+  .energ-type-ctn .tile {
+    font-size: 2.25rem;
+    padding: 0;
+    border-radius: 14px;
+  }
+
+  .content-ctn figure {
+    padding: 0;
+  }
+
+  figure img {
+    border-radius: 20px;
   }
 }
-
