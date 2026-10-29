@@ -18,7 +18,7 @@ h1 {
 }
 
 h2 {
-  color: var(--ef-bg1);
+  color: var(--ef-yellow);
 }
 
 body {
@@ -128,24 +128,9 @@ footer > a {
   gap: 0.5rem;
 }
 
-.rt-sol-txt {
-  color: var(--ef-orange);
-}
-
-.wind-txt {
-  color: var(--ef-cyan)
-}
-
-.water-txt {
-  color: var(--ef-blue)
-}
-
-.nu-txt{
-  color: var(--ef-green)
-}
-
 .sv-label {
   background-color: var(--ef-yellow);
+  color: var(--ef-bg1);
   width: 100%;
   text-align: center;
   padding: 0.6em 0em;
@@ -168,6 +153,7 @@ figure img {
 }
 
 figcaption {
+  color: var(--ef-fg-dim);
   margin-top: 0.5em;
   text-align: center;
   font-size: 0.7em;

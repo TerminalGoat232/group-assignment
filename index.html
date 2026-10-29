@@ -29,6 +29,25 @@
       transition: color 0.5s ease;
     }
     
+    body:has(.nf-md-wind_power_outline:hover) .wind-txt {
+      color: var(--ef-cyan);
+      transition: background-color 0.3s ease;
+    }
+
+    body:has(.nf-md-solar_power_variant_outline:hover) .rt-sol-txt {
+      color: var(--ef-orange);
+      transition: background-color 0.3s ease;
+    }
+    
+    body:has(.nf-md-waterfall:hover) .water-txt {
+      color: var(--ef-blue);
+      transition: background-color 0.3s ease;
+    }
+
+    body:has(.nf-fae-atom:hover) .nu-txt {
+      color: var(--ef-green);
+      transition: background-color 0.3s ease;
+    }
     .nf:hover {
       color:var(--ef-bg2);
       transition: color 0.2s ease;
@@ -43,7 +62,7 @@
           <a href="index.html" aria-current="page">Home</a>
           <a href="about.html" >About us</a>
           <a href="apply.html">Join us</a>
-          <a href="jobs.html">Career</a>
+          <a href="jobs.html">Jobs</a>
         </nav>
 
         <div class = "bg-overlay">
@@ -69,7 +88,13 @@
     <main>
       <div class="content-ctn">
         <div class="desc-ctn">
-          <h1> What do we actually do? </h1>
+          <h1> What do we actually do<span style="font-size:1.3em">?</span> </h1>
+            <hr style=
+                "margin: 2rem 0rem; 
+                 color: var(--ef-bg1);
+                 border: 0;
+                 border-top: 5px dashed var(--ef-bg5);"
+            >
             <p>Susnium&trade; designs, builds, and operates clean energy infrastructure around the world. Our projects range from <span class="rt-sol-txt">rooftop solar</span> for homes and businesses to utility-scale <span class="wind-txt">wind</span>, <span class="water-txt">hydro</span>, and <span class="nu-txt">nuclear</span> power plants. We stay with each project after it is built, using monitoring technology and a dedicated maintenance team to keep it running reliably. We also build the public websites and dashboards that let communities see how their local project is performing.</p>
         </div>
           <!-- <div class="dummy"></div> -->
@@ -84,11 +109,11 @@
               src="images/operating-site.jpg" 
               alt="picture of our nuclear and wind powerplant in Ninh Thuan, VN"
         >
-        <figcaption>A look at our nuclear and wind powerplant in Ninh Thuan, VN</figcaption>
+        <figcaption>A look at our nuclear and wind powerplant complex in Ninh Thuan, 🇻🇳.</figcaption>
       </figure>
       <h2 class="sv-label"> Our featured services </h2>
       <table>
-        
+
       </table>  
       </div>
 
