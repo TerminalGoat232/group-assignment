@@ -1,116 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body>
-  <h1 style="color: aqua;">Test</h1>
-  <p>idk</p>
-</body>
-<footer>
-
-</footer>
-
-</html>
-=======
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>A1 project idk</title>
+    <title>Home | Susnium Clean Energy</title>
     <link href="style.css" rel="stylesheet">
- 
-  <style>   
-    .hero_ctn {
-      padding: clamp(3rem, 10vw, 8rem) 2rem; 
-    }
+    <style>
+      .hero_ctn {
+        padding: clamp(3rem, 10vw, 8rem) 2rem;
+      }
 
-    /* Hero headline was inline, now scales down on phones */
-    .hero_title {
-      font-size: clamp(2rem, 7vw, 4.5rem);
-      font-weight: 600;
-      color: var(--ef-bg4);
-    }
+      .hero_title {
+        font-size: clamp(2rem, 7vw, 4.5rem);
+        font-weight: 600;
+        color: var(--ef-bg0);
+      }
 
-    p {
-      color: var(--ef-fg);
-    }
+      .nf {
+        font-size: 5.875em;
+        padding: 0.5em;
+        border-radius: 25px;
+        transition: color 0.5s ease;
+      }
 
-    .nf {
-      font-size: 5.875em;
-      padding: 0.5em;
-      border-radius:25px; 
-      transition: color 0.5s ease;
-    }
-    
-    .nf:hover {
-      color:var(--ef-bg2);
-      transition: color 0.2s ease;
-    }
-
-  </style>
+      .nf:hover {
+        color: var(--ef-bg0);
+        transition: color 0.2s ease;
+      }
+    </style>
   </head>
   <body>
     <header>
+      <nav aria-label="Primary Navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About us</a>
+        <a href="apply.html">Join us</a>
+        <a href="jobs.html">Career</a>
+      </nav>
 
-        <nav>
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="about.html" >About us</a>
-          <a href="apply.html">Join us</a>
-          <a href="jobs.html">Career</a>
-        </nav>
-
-        <div class = "bg-overlay">
-          <section class="hero_ctn">
-            <p class="hero_title">
-              Powering communities with 
-              <span 
-                style="all: inherit; 
-                background-color:var(--ef-green); 
-                width: fit-content;
-                padding: 0.1em 0.2em;
-                border-radius: 10px;
-                font-style:italic;
-                -webkit-box-decoration-break: clone;
-                box-decoration-break: clone;">
-                clean energy
-              </span>
-            </p>
-          </section>
-        </div>
-     
+      <div class="bg-overlay">
+        <section class="hero_ctn">
+          <p class="hero_title">
+            Powering communities with
+            <span class="hl-green">clean energy</span>
+          </p>
+        </section>
+      </div>
     </header>
+
     <main>
       <div class="content-ctn">
         <div class="desc-ctn">
-          <h1> What do we actually do? </h1>
-            <p>Susnium&trade; designs, builds, and operates clean energy infrastructure around the world. Our projects range from <span class="rt-sol-txt">rooftop solar</span> for homes and businesses to utility-scale <span class="wind-txt">wind</span>, <span class="water-txt">hydro</span>, and <span class="nu-txt">nuclear</span> power plants. We stay with each project after it is built, using monitoring technology and a dedicated maintenance team to keep it running reliably. We also build the public websites and dashboards that let communities see how their local project is performing.</p>
+          <h1>What do we actually do?</h1>
+          <p>
+            Susnium&trade; designs, builds, and operates clean energy infrastructure around the world. Our projects range from <span class="rt-sol-txt">rooftop solar</span> for homes and businesses to utility-scale <span class="wind-txt">wind</span>, <span class="water-txt">hydro</span>, and <span class="nu-txt">nuclear</span> power plants. We stay with each project after it is built, using monitoring technology and a dedicated maintenance team to keep it running reliably. We also build the public websites and dashboards that let communities see how their local project is performing.
+          </p>
         </div>
-          <!-- <div class="dummy"></div> -->
-        <ul class="energ-type-ctn" aria-label="Energy types we work with">
-            <li><i style="background-color:var(--ef-cyan)" class="tile nf nf-md-wind_power_outline" aria-hidden="true"></i></li>
-            <li><i style="background-color:var(--ef-orange)" class="tile nf nf-md-solar_power_variant_outline" aria-hidden="true"></i></li>
-            <li><i style="background-color:var(--ef-blue)" class="tile nf nf-md-waterfall" aria-hidden="true"></i></li>
-            <li><i style="background-color:var(--ef-green)" class="tile nf nf-fae-atom" aria-hidden="true"></i></li>
-        </ul>
-      <figure>
-        <img 
-              src="images/operating-site.jpg" 
-              alt="picture of our nuclear and wind powerplant in Ninh Thuan, VN"
-        >
-        <figcaption>A look at our nuclear and wind powerplant in Ninh Thuan, VN</figcaption>
-      </figure>
-      <h2 class="sv-label"> Our featured services </h2>
-      <table>
-        
-      </table>  
-      </div>
 
+        <ul class="energ-type-ctn" aria-label="Energy types we work with">
+          <li><i style="background-color: var(--ef-cyan)" class="tile nf nf-md-wind_power_outline" aria-hidden="true"></i></li>
+          <li><i style="background-color: var(--ef-orange)" class="tile nf nf-md-solar_power_variant_outline" aria-hidden="true"></i></li>
+          <li><i style="background-color: var(--ef-blue)" class="tile nf nf-md-waterfall" aria-hidden="true"></i></li>
+          <li><i style="background-color: var(--ef-green)" class="tile nf nf-fae-atom" aria-hidden="true"></i></li>
+        </ul>
+
+        <figure>
+          <img
+            src="images/operating-site.jpg"
+            alt="Picture of our nuclear and wind powerplant in Ninh Thuan, VN"
+          >
+          <figcaption>A look at our nuclear and wind powerplant in Ninh Thuan, VN</figcaption>
+        </figure>
+      </div>
     </main>
 
     <footer>
@@ -120,4 +81,3 @@
     </footer>
   </body>
 </html>
->>>>>>> 470aa68ebd84e084fb1f2cf08ec051bd3b8efbc8

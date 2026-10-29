@@ -3,24 +3,458 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>A1 project idk</title>
+    <meta name="description" content="Apply for a career at Susnium Clean Energy — Global & Australian Job Application Form with HTML5 validation.">
+    <title>Join Us — Job Application | Susnium Clean Energy</title>
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <header>
-      <nav>
+      <nav aria-label="Primary Navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About us</a>
         <a href="apply.html" aria-current="page">Join us</a>
         <a href="jobs.html">Career</a>
-    </nav>
+      </nav>
+
+      <div class="subpage-banner">
+        <div class="subpage-banner-inner">
+          <div>
+            <h1>
+              Build the future with <span class="hl-green">Susnium&trade;</span>
+            </h1>
+            <p>
+              Global Personnel Application Dossier &middot; Open to applicants worldwide across our clean energy engineering, research, and legal divisions. Fields marked with <span class="req-marker">*</span> are required.
+            </p>
+          </div>
+        </div>
+      </div>
     </header>
-    <main>
+
+    <main class="page-shell">
+      <div class="apply-layout">
+        <form
+          class="application-form"
+          id="job-application-form"
+          action="https://mercury.swin.edu.au/it000000/formtest.php"
+          method="post"
+        >
+          <fieldset class="form-section">
+            <legend>1. Position &amp; Personal Details</legend>
+
+            <div class="field-grid-2">
+              <div class="form-group">
+                <label for="job-ref">Job Reference Number <span class="req-marker" aria-hidden="true">*</span></label>
+                <span id="job-ref-hint" class="field-hint">Exactly 5 alphanumeric characters (e.g., ENRSC or LGCSL).</span>
+                <input
+                  type="text"
+                  id="job-ref"
+                  name="job_ref"
+                  minlength="5"
+                  maxlength="5"
+                  pattern="[A-Za-z0-9]{5}"
+                  placeholder="e.g. ENRSC"
+                  autocorrect="off"
+                  autocapitalize="characters"
+                  spellcheck="false"
+                  aria-describedby="job-ref-hint"
+                  aria-errormessage="job-ref-error"
+                  title="Enter exactly 5 alphanumeric characters."
+                  required
+                >
+                <div id="job-ref-error" class="error-msg" aria-live="polite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Must be exactly 5 letters or digits (e.g., ENRSC).</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="dob">Date of Birth <span class="req-marker" aria-hidden="true">*</span></label>
+                <span id="dob-hint" class="field-hint">Format: dd/mm/yyyy (e.g., 15/08/2004).</span>
+                <input
+                  type="text"
+                  id="dob"
+                  name="dob"
+                  maxlength="10"
+                  pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}"
+                  placeholder="dd/mm/yyyy"
+                  inputmode="numeric"
+                  autocomplete="bday"
+                  aria-describedby="dob-hint"
+                  aria-errormessage="dob-error"
+                  title="Enter your date of birth in dd/mm/yyyy format."
+                  required
+                >
+                <div id="dob-error" class="error-msg" aria-live="polite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Please enter a valid date in dd/mm/yyyy format.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="field-grid-2">
+              <div class="form-group">
+                <label for="first-name">First Name <span class="req-marker" aria-hidden="true">*</span></label>
+                <span id="first-name-hint" class="field-hint">Maximum 20 alphabetical characters.</span>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first_name"
+                  maxlength="20"
+                  pattern="[A-Za-zÀ-ỹ ]{1,20}"
+                  placeholder="e.g. Huy Thanh / Alex"
+                  autocomplete="given-name"
+                  aria-describedby="first-name-hint"
+                  aria-errormessage="first-name-error"
+                  title="First name must contain up to 20 alphabetical letters."
+                  required
+                >
+                <div id="first-name-error" class="error-msg" aria-live="polite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Use up to 20 alphabetical letters only.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="last-name">Last Name <span class="req-marker" aria-hidden="true">*</span></label>
+                <span id="last-name-hint" class="field-hint">Maximum 20 alphabetical characters.</span>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last_name"
+                  maxlength="20"
+                  pattern="[A-Za-zÀ-ỹ ]{1,20}"
+                  placeholder="e.g. Nguyen / Smith"
+                  autocomplete="family-name"
+                  aria-describedby="last-name-hint"
+                  aria-errormessage="last-name-error"
+                  title="Last name must contain up to 20 alphabetical letters."
+                  required
+                >
+                <div id="last-name-error" class="error-msg" aria-live="polite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Use up to 20 alphabetical letters only.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <fieldset class="sub-fieldset">
+                <legend>Gender <span class="req-marker" aria-hidden="true">*</span></legend>
+                <span class="field-hint">Select one option.</span>
+                <div class="radio-group">
+                  <div class="choice-item">
+                    <input type="radio" id="gender-male" name="gender" value="Male" required>
+                    <label for="gender-male">Male</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="radio" id="gender-female" name="gender" value="Female" required>
+                    <label for="gender-female">Female</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="radio" id="gender-nonbinary" name="gender" value="Non-binary" required>
+                    <label for="gender-nonbinary">Non-binary / Gender Diverse</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="radio" id="gender-prefer-not" name="gender" value="Prefer not to say" required>
+                    <label for="gender-prefer-not">Prefer not to say</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>2. Residential Address &amp; Location</legend>
+
+            <div class="form-group">
+              <label for="street-address">Street Address <span class="req-marker" aria-hidden="true">*</span></label>
+              <span id="street-address-hint" class="field-hint">Maximum 40 characters (street number, street name, or ward).</span>
+              <input
+                type="text"
+                id="street-address"
+                name="street_address"
+                maxlength="40"
+                pattern=".{1,40}"
+                placeholder="e.g. 123 Nguyen Van Linh / 427 Burwood Rd"
+                autocomplete="address-line1"
+                aria-describedby="street-address-hint"
+                aria-errormessage="street-address-error"
+                title="Enter your street address (up to 40 characters)."
+                required
+              >
+              <div id="street-address-error" class="error-msg" aria-live="polite">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                <span>Street address is required (maximum 40 characters).</span>
+              </div>
+            </div>
+
+            <div class="field-grid-3">
+              <div class="form-group">
+                <label for="suburb">Suburb / Town / City <span class="req-marker" aria-hidden="true">*</span></label>
+                <span id="suburb-hint" class="field-hint">Maximum 40 characters.</span>
+                <input
+                  type="text"
+                  id="suburb"
+                  name="suburb"
+                  maxlength="40"
+                  pattern=".{1,40}"
+                  placeholder="e.g. Da Nang / Hawthorn / Tokyo"
+                  autocomplete="address-level2"
+                  aria-describedby="suburb-hint"
+                  aria-errormessage="suburb-error"
+                  title="Enter your suburb, district, or city (up to 40 characters)."
+                  required
+                >
+                <div id="suburb-error" class="error-msg" aria-live="polite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Suburb, town, or city is required (max 40 characters).</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="state">State / Province / Region <span class="req-marker" aria-hidden="true">*</span></label>
+                <span id="state-hint" class="field-hint">Select state, province, or global region.</span>
+                <select
+                  id="state"
+                  name="state"
+                  autocomplete="address-level1"
+                  aria-describedby="state-hint"
+                  aria-errormessage="state-error"
+                  required
+                >
+                  <option value="">Select state or region...</option>
+                  <optgroup label="Australia">
+                    <option value="VIC">VIC</option>
+                    <option value="NSW">NSW</option>
+                    <option value="QLD">QLD</option>
+                    <option value="NT">NT</option>
+                    <option value="WA">WA</option>
+                    <option value="SA">SA</option>
+                    <option value="TAS">TAS</option>
+                    <option value="ACT">ACT</option>
+                  </optgroup>
+                  <optgroup label="Viet Nam">
+                    <option value="VN-DN">Da Nang (VN)</option>
+                    <option value="VN-SG">Ho Chi Minh City (VN)</option>
+                    <option value="VN-HN">Ha Noi (VN)</option>
+                    <option value="VN-NT">Ninh Thuan (VN)</option>
+                    <option value="VN-OTHER">Other Province (Viet Nam)</option>
+                  </optgroup>
+                  <optgroup label="International Regions">
+                    <option value="INTL-APAC">Asia-Pacific</option>
+                    <option value="INTL-EU">Europe / UK</option>
+                    <option value="INTL-AMER">Americas</option>
+                    <option value="INTL-OTHER">Other Global Region</option>
+                  </optgroup>
+                </select>
+                <div id="state-error" class="error-msg" aria-live="polite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Please select a state, province, or region.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="postcode">Postcode / Postal Code <span class="req-marker" aria-hidden="true">*</span></label>
+                <span id="postcode-hint" class="field-hint">4 digits (or 4&ndash;10 chars for international).</span>
+                <input
+                  type="text"
+                  id="postcode"
+                  name="postcode"
+                  minlength="4"
+                  maxlength="4"
+                  pattern="[0-9]{4}"
+                  inputmode="numeric"
+                  placeholder="e.g. 3122 or 550000"
+                  autocomplete="postal-code"
+                  aria-describedby="postcode-hint"
+                  aria-errormessage="postcode-error"
+                  title="Enter 4 digits (or 4-10 postal characters for international regions)."
+                  required
+                >
+                <div id="postcode-error" class="error-msg" aria-live="polite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Enter a valid postal code for the selected region.</span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>3. Contact Information</legend>
+
+            <div class="field-grid-2">
+              <div class="form-group">
+                <label for="email">Email Address <span class="req-marker" aria-hidden="true">*</span></label>
+                <span id="email-hint" class="field-hint">Format: name@domain.com</span>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                  placeholder="applicant@example.com"
+                  autocomplete="email"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  aria-describedby="email-hint"
+                  aria-errormessage="email-error"
+                  title="Enter a valid email address."
+                  required
+                >
+                <div id="email-error" class="error-msg" aria-live="polite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="req-marker" aria-hidden="true">*</span></label>
+                <span id="phone-hint" class="field-hint">8 to 12 digits (e.g., 0912345678 or 0412345678).</span>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  minlength="8"
+                  maxlength="12"
+                  pattern="[0-9 ]{8,12}"
+                  inputmode="numeric"
+                  placeholder="0912345678"
+                  autocomplete="tel"
+                  aria-describedby="phone-hint"
+                  aria-errormessage="phone-error"
+                  title="Phone number must be 8 to 12 digits."
+                  required
+                >
+                <div id="phone-error" class="error-msg" aria-live="polite">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  <span>Phone number must be between 8 and 12 digits.</span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>4. Technical Skills &amp; Qualifications</legend>
+
+            <div class="form-group">
+              <fieldset class="sub-fieldset" id="skills-fieldset">
+                <legend>Skill List <span class="req-marker" aria-hidden="true">*</span></legend>
+                <span id="skills-hint" class="field-hint">Check all relevant skills (at least one selection is required).</span>
+                <div class="checkbox-grid" role="group" aria-describedby="skills-hint">
+                  <div class="choice-item">
+                    <input type="checkbox" id="skill-renewable" name="skills[]" value="Renewable Energy Systems" checked required>
+                    <label for="skill-renewable">Renewable Energy Systems &amp; Grid Tech</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="checkbox" id="skill-data" name="skills[]" value="Data Modelling & Analytics" required>
+                    <label for="skill-data">Data Modelling, Python &amp; AI Workflows</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="checkbox" id="skill-web" name="skills[]" value="Web & Telemetry Dashboards" required>
+                    <label for="skill-web">Web Architecture &amp; Telemetry Dashboards</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="checkbox" id="skill-legal" name="skills[]" value="Energy Law & Regulatory Compliance" required>
+                    <label for="skill-legal">Energy Law, Contracts &amp; Policy Compliance</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="checkbox" id="skill-pm" name="skills[]" value="Project Management & Safety" required>
+                    <label for="skill-pm">Infrastructure Project Management</label>
+                  </div>
+                  <div class="choice-item">
+                    <input type="checkbox" id="skill-other" name="skills[]" value="Other Skills" required>
+                    <label for="skill-other">Other Specialist Skills (detail below)</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-group">
+              <label for="other-skills">Other Skills <span class="opt-marker">(Optional)</span></label>
+              <span id="other-skills-hint" class="field-hint">Describe any additional certifications, languages, publications, or field experience.</span>
+              <textarea
+                id="other-skills"
+                name="other_skills"
+                rows="4"
+                placeholder="Share any additional technical competencies, certifications, or relevant project details..."
+                aria-describedby="other-skills-hint"
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <div class="btn-row">
+            <button type="submit" class="btn-primary">Submit Application</button>
+            <button type="reset" class="btn-secondary">Reset Form</button>
+          </div>
+        </form>
+
+        <aside class="apply-aside" aria-labelledby="open-roles-heading">
+          <h2 id="open-roles-heading">Open Job Reference Codes</h2>
+          <p style="font-size: 0.9rem;">
+            Select a position code below to populate the Job Reference Number field, or review full role specifications on the <a href="jobs.html">Career page</a>.
+          </p>
+          <ul class="ref-card-list">
+            <li class="ref-card-item">
+              <div>
+                <strong style="color: var(--ef-fg-strong); display: block; font-size: 0.95rem;">Energy Researcher</strong>
+                <span class="code-badge">ENRSC</span>
+              </div>
+              <button type="button" class="btn-chip fill-ref-btn" data-ref="ENRSC">Use ENRSC</button>
+            </li>
+            <li class="ref-card-item">
+              <div>
+                <strong style="color: var(--ef-fg-strong); display: block; font-size: 0.95rem;">Legal Counsel</strong>
+                <span class="code-badge">LGCSL</span>
+              </div>
+              <button type="button" class="btn-chip fill-ref-btn" data-ref="LGCSL">Use LGCSL</button>
+            </li>
+          </ul>
+        </aside>
+      </div>
     </main>
+
+    <footer>
+      <a href="https://student-team-aas2h8hq.atlassian.net/jira/software/projects/KAN/boards/1?filter=&amp;groupBy=none&amp;atlOrigin=eyJpIjoiZWYzYWZmYTBiNzQ3NDVjMjk1ZGU0ZjkwNWIyZmEzYTAiLCJwIjoiaiJ9">Jira Project</a> |
+      <a href="https://github.com/terminalgoat232/group-assignment">GitHub</a> |
+      <a href="mailto:info@susnium.com">info@susnium.com</a>
+    </footer>
+
+    <script>
+      (function () {
+        const form = document.getElementById('job-application-form');
+        const jobRef = document.getElementById('job-ref');
+        const state = document.getElementById('state');
+        const postcode = document.getElementById('postcode');
+        const postcodeHint = document.getElementById('postcode-hint');
+        const skills = Array.from(document.querySelectorAll('#skills-fieldset input[type="checkbox"]'));
+        const auStates = new Set(['VIC', 'NSW', 'QLD', 'NT', 'WA', 'SA', 'TAS', 'ACT']);
+
+        function syncRegion() {
+          const intl = state.value && !auStates.has(state.value);
+          postcode.maxLength = intl ? 10 : 4;
+          postcode.pattern = intl ? '[A-Za-z0-9 \\-]{4,10}' : '[0-9]{4}';
+          postcode.inputMode = intl ? 'text' : 'numeric';
+          postcodeHint.textContent = intl ? '4–10 characters (VN / International postal code).' : '4 digits (or 4–10 chars for international).';
+        }
+
+        function syncSkills() {
+          const checked = skills.some((c) => c.checked);
+          skills.forEach((c) => { c.required = checked ? c.checked : true; });
+        }
+
+        state.addEventListener('change', syncRegion);
+        skills.forEach((c) => c.addEventListener('change', syncSkills));
+        syncSkills();
+
+        document.querySelectorAll('.fill-ref-btn').forEach((b) => {
+          b.addEventListener('click', () => { jobRef.value = b.dataset.ref; jobRef.focus(); });
+        });
+
+        const syncAria = (el) => el.checkValidity && el.setAttribute('aria-invalid', String(el.matches(':user-invalid')));
+        form.addEventListener('blur', (e) => syncAria(e.target), true);
+        form.addEventListener('input', (e) => e.target.hasAttribute('aria-invalid') && syncAria(e.target));
+        form.addEventListener('reset', () => setTimeout(() => { syncRegion(); syncSkills(); }, 0));
+      })();
+    </script>
   </body>
-  <footer>
-    <a href="https://student-team-aas2h8hq.atlassian.net/jira/software/projects/KAN/boards/1?filter=&groupBy=none&atlOrigin=eyJpIjoiZWYzYWZmYTBiNzQ3NDVjMjk1ZGU0ZjkwNWIyZmEzYTAiLCJwIjoiaiJ9">Jira Project</a> |
-    <a href="https://github.com/terminalgoat232/group-assignment">GitHub</a> |
-    <a href="mailto:info@g03energy.com">info@susnium.com</a>
-  </footer>
 </html>
