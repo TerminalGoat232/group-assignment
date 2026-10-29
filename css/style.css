@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import "colorscheme.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--ef-fg);
+  box-sizing: border-box;
+  font-family:"IBM Plex Mono", monospace;
+  /* This should be removed for the use of rem relative instead of px absolute in other files */
+  /* By default 1rem = 16px on most browser */
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--ef-bg0);
+  display: grid;
+}
+
+nav {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  diplay: flex;
+  flex-wrap: wrap;
+  background-color: var(--ef-bg3);
+}
+
+nav a {
+  padding: 0.2em;
+  color: var(--ef-fg-dim);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--ef-green);
+  text-decoration-color: var(--ef-green);
+}
+
+nav a[aria-current="page"] {
+  color: var(--ef-green);
+  text-decoration-color: var(--ef-green); 
+  font-weight: 520;
+}
+
+footer {
+  padding-top: 1em;
+  padding-bottom:1em;
+  text-align:center;
+  background-color: var(--ef-fg);
+  color: var(--ef-bg5);
+  font-size: 13px !important;
+}
+
+footer > a {
+  color: inherit;
+  font-size: inherit;
+}
+
+@media (max-width: 1000px) {
+    body {
+        display: block;
+    }
+
+    #left-window, 
+    #right-window {
+        display: none; 
+    }
+}
+
+@media (max-width: 680px) {
+    body {
+        font-size: 13px;
+    }
+}
+
