@@ -161,6 +161,7 @@ figure img {
   display: block;
   width:  85%;
   height: auto;
+  max-height: 720px;
   margin-inline: auto;
   border-radius: 30px;
 }
