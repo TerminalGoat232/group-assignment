@@ -1,34 +1,43 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Trang Apply - Team 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application - Team 5</title>
+    <!-- Gắn file colorscheme.css theo đúng yêu cầu của Bảo -->
+    <link rel="stylesheet" href="css/colorscheme.css">
 </head>
 <body>
-    <h1>Đơn đăng ký / Apply Form</h1>
-    <p>Vui lòng điền thông tin bên dưới để nộp hồ sơ.</p>
+    <h1>Job Application Form</h1>
+    <p>Please fill in the form below to apply for a position.</p>
 
     <form>
-        <label for="fullname">Họ và tên:</label><br>
-        <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên" required><br><br>
+        <!-- Full Name -->
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
 
-        <label for="email">Email liên hệ:</label><br>
+        <!-- Email -->
+        <label for="email">Email Address:</label><br>
         <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
 
-        <label for="phone">Số điện thoại:</label><br>
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label><br>
         <input type="tel" id="phone" name="phone" placeholder="0901234567"><br><br>
 
-        <label for="position">Vị trí ứng tuyển:</label><br>
+        <!-- Position -->
+        <label for="position">Position Applying For:</label><br>
         <select id="position" name="position">
             <option value="developer">Frontend Developer</option>
             <option value="designer">UI/UX Designer</option>
-            <option value="tester">Tester</option>
+            <option value="tester">QA / Tester</option>
         </select><br><br>
 
-        <label for="message">Lời nhắn / Giới thiệu bản thân:</label><br>
-        <textarea id="message" name="message" rows="4" cols="40" placeholder="Giới thiệu ngắn gọn..."></textarea><br><br>
+        <!-- Cover Letter / Message -->
+        <label for="message">Cover Letter / Introduction:</label><br>
+        <textarea id="message" name="message" rows="4" cols="40" placeholder="Brief introduction about yourself..."></textarea><br><br>
 
-        <button type="submit">Nộp đơn (Apply)</button>
+        <!-- Submit Button -->
+        <button type="submit">Submit Application</button>
     </form>
 </body>
 </html>
