@@ -24,6 +24,7 @@ form {
     border: none;
     border-radius: 30px;
     outline: none;
+    margin-bottom: 1em;
 }
 
 .search-button {
@@ -40,16 +41,16 @@ form {
 }
 
 /* Jobs */
+
 .job-info {
-    position: relative;
-    background: #FDFBF2;
-    border: 3px solid #e3e3e3;
+    background: var(--ef-bg1);
+    border: 3px solid var(--ef-bg2);
     padding: 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 1em auto;
     box-sizing: border-box;
     border-radius: 5px;
-    }
+}
 
 .job-info + .job-info {
     border-top: none;

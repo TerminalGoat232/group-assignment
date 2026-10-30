@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import "colorscheme.css";
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:"IBM Plex Mono", monospace;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  color: var(--ef-red);
+}
+
+h2 {
+  color: var(--ef-yellow);
+}
+
+body {
+  font-size: 1.25rem; 
+  background-color: var(--ef-bg0);
+  display: grid;
+  grid-template-rows:auto 1fr auto;
+  min-height:100vh;
+}
+
+::focus-visible {
+  outline: 3px solid var(--ef-green);
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: var(--ef-purple);
+  color: var(--ef-bg0);
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+nav {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--ef-bg3);
+}
+
+nav a:not(.logo-lnk) {
+  padding: 0.6em;
+  color: var(--ef-fg);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: 
+    text-decoration-color 0.5s ease, 
+    color 0.2s ease,
+    background-color 0.5s ease;
+  font-size:1em; 
+}
+
+nav a:not(.logo-lnk):hover {
+  border-radius: 5px;
+  background-color: var(--ef-bg2);
+  color: var(--ef-green);
+  text-decoration-color: var(--ef-green);
+}
+
+nav a[aria-current="page"] {
+  color: var(--ef-green);
+  text-decoration-color: var(--ef-green); 
+  font-weight: 520;
+}
+
+footer {
+  padding: 1em 1em;
+  text-align:center;
+  background-color: var(--ef-bg-black);
+  color: var(--ef-bg4);
+  font-size: 0.875rem;
+}
+
+footer > a {
+  color: inherit;
+  font-size: inherit;
+}
+
+.bg-overlay {
+  background-image:
+    linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.60) 45%,
+      rgba(0, 0, 0, 0.15) 100%
+    ), url('../images/hero_bg_overlay.jpeg');
+  background-size: cover;
+  background-position: bottom;    
+}
+
+/* main no longer forces two equal grid rows (it only has one block now,
+   so the second row was just empty space) */
+
+.content-ctn {
+  justify-content: center;
+  font-size: 1.5em;
+  padding: 8rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2rem;          /* stops wrapped items touching each other */
+}
+
+.desc-ctn {
+  background-color: var(--ef-bg1);
+  max-width:700px;
+  padding: 1em 1em;
+  border-radius: 10px;
+  border: 2px solid var(--ef-bg2);
+ }
+
+
+.energ-type-ctn {
+  margin: 2rem 3em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+  list-style: none;
+}
+
+.tile {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ef-bg-black);
+}
+
+.sv-label {
+  background-color: var(--ef-yellow);
+  color: var(--ef-bg0);
+  width: 100%;
+  text-align: center;
+  padding: 0.6em 0em;
+}
+
+/* Image row: centred on its own line */
+.content-ctn figure {
+  flex: 0 1 80rem;        /* up to 80rem wide, shrinks on small screens */
+  max-width: 100%;
+  margin-inline: auto;    /* auto side margins centre it */
+  padding: 3em;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-inline: auto;
+  border-radius: 40px;
+}
+
+figcaption {
+  color: var(--ef-fg-dim);
+  margin-top: 0.5em;
+  text-align: center;
+  font-size: 0.7em;
+  font-style: italic;
+}
+/* --- table --- */
+
+
+
+table {
+  display: table;
+  border-collapse: collapse;
+  padding: 0.5em;
+}
+
+caption h2 {
+  border: solid var(--ef-bg-black);
+  border-width: 5px 5px 0px 5px;
+  border-radius: 15px 15px 0 0;
+}
+
+td, th{
+  padding: 0.5em 0.75em;
+  border: 5px solid var(--ef-bg-black);
+
+}
+
+thead {
+  color: var(--ef-bg0);
+  background-color: var(--ef-blue);
+}
+
+tbody th {
+  color: var(--ef-bg-black);
+  background-color: var(--ef-bg5);
+}
+
+tbody td {
+  color: var(--ef-fg);
+  background-color: var(--ef-bg1);
+}
+
+.span-all {
+  font-style: italic;
+  color: var(--ef-bg0);
+  background-color: var(--ef-red);
+}
+@media (max-width: 1000px) {
+    body {
+        display: grid;
+    }
+
+    #left-window, 
+    #right-window {
+        display: none; 
+    }
+}
+
+@media (max-width: 680px) {
+  html {
+    font-size: 14px; /* scales ALL rem units down uniformly */
+  }
+
+  nav {
+    gap: 0;
+    padding: 0.25rem 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+    padding: 0.6em 0.5em; /* larger tap target on small screens */
+  }
+
+  .content-ctn {
+    font-size: 1em;        /* was 1.5em, which made everything huge on phones */
+    padding: 1.5rem 1rem;
+    row-gap: 1.5rem;
+  }
+
+  .desc-ctn {
+    padding: 1rem;
+  }
+
+  /* Four tiles in one row, with a real gap under the card */
+  .energ-type-ctn {
+    width: 100%;
+    margin: 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  /* .energ-type-ctn .tile beats the embedded .nf rule in index.html */
+  .energ-type-ctn .tile {
+    font-size: 2.25rem;
+    padding: 0;
+    border-radius: 14px;
+  }
+
+  .content-ctn figure {
+    padding: 0;
+  }
+
+  figure img {
+    border-radius: 20px;
+  }
+}
