@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Apply - Team 5</title>
+</head>
+<body>
+    <h1>Đơn đăng ký / Apply Form</h1>
+    <p>Vui lòng điền thông tin bên dưới để nộp hồ sơ.</p>
+
+    <form>
+        <label for="fullname">Họ và tên:</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên" required><br><br>
+
+        <label for="email">Email liên hệ:</label><br>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
+
+        <label for="phone">Số điện thoại:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="0901234567"><br><br>
+
+        <label for="position">Vị trí ứng tuyển:</label><br>
+        <select id="position" name="position">
+            <option value="developer">Frontend Developer</option>
+            <option value="designer">UI/UX Designer</option>
+            <option value="tester">Tester</option>
+        </select><br><br>
+
+        <label for="message">Lời nhắn / Giới thiệu bản thân:</label><br>
+        <textarea id="message" name="message" rows="4" cols="40" placeholder="Giới thiệu ngắn gọn..."></textarea><br><br>
+
+        <button type="submit">Nộp đơn (Apply)</button>
+    </form>
+</body>
+</html>
