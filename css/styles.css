@@ -35,7 +35,7 @@ body {
 }
 
 ::selection {
-  background-color: var(--ef-purple);
+  background-color: var(--ef-purple-light);
   color: var(--ef-bg0);
 }
 
@@ -57,7 +57,7 @@ nav {
 
 nav a:not(.logo-lnk) {
   padding: 0.6em;
-  color: var(--ef-fg);
+  color: var(--ef-bg);
   text-decoration: underline;
   text-decoration-color: transparent;
   transition: 
@@ -80,19 +80,6 @@ nav a[aria-current="page"] {
   font-weight: 520;
 }
 
-footer {
-  padding: 1em 1em;
-  text-align:center;
-  background-color: var(--ef-bg-black);
-  color: var(--ef-bg4);
-  font-size: 0.875rem;
-}
-
-footer > a {
-  color: inherit;
-  font-size: inherit;
-}
-
 .bg-overlay {
   background-image:
     linear-gradient(
@@ -105,8 +92,22 @@ footer > a {
   background-position: bottom;    
 }
 
-/* main no longer forces two equal grid rows (it only has one block now,
-   so the second row was just empty space) */
+/* --- hero ---*/
+.hero_ctn {
+  padding: clamp(3rem, 10vw, 8rem) 2rem; 
+}
+
+.hero_title {
+  font-size: clamp(2rem, 7vw, 4.5rem);
+  font-weight: 600;
+  color: var(--ef-bg4);
+  /* transition: letter-spacing 0.3s ease-out;*/
+}
+
+/*.hero_title:hover {
+  letter-spacing: 0.5rem;
+  transition: letter-spacing 0.3s ease;
+}*/
 
 .content-ctn {
   justify-content: center;
@@ -114,7 +115,9 @@ footer > a {
   padding: 8rem 2rem;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 2rem;          /* stops wrapped items touching each other */
+  max-width: 1700px;
+  margin:auto;
+  row-gap: 2rem;          
 }
 
 .desc-ctn {
@@ -146,40 +149,121 @@ footer > a {
   color: var(--ef-bg-black);
 }
 
-.sv-label {
-  background-color: var(--ef-yellow);
-  color: var(--ef-bg0);
-  width: 100%;
-  text-align: center;
-  padding: 0.6em 0em;
-}
-
-/* Image row: centred on its own line */
+/* --- image and image carousel --- */
 .content-ctn figure {
-  flex: 0 1 80rem;        /* up to 80rem wide, shrinks on small screens */
+  flex: 0 1 80rem;        
   max-width: 100%;
-  margin-inline: auto;    /* auto side margins centre it */
-  padding: 3em;
+  margin-inline: auto;    
+  margin-bottom: 2em;
 }
 
 figure img {
   display: block;
-  width: 100%;
+  width:  85%;
   height: auto;
   margin-inline: auto;
-  border-radius: 40px;
+  border-radius: 30px;
 }
 
 figcaption {
-  color: var(--ef-fg-dim);
+  color: var(--ef-fg);
   margin-top: 0.5em;
   text-align: center;
   font-size: 0.7em;
   font-style: italic;
 }
+
+.img-carousel{
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.img-carousel li {
+  list-style-type: none;
+  scroll-snap-align: center;
+  flex: 0 0 100%;
+}
+
+#crs-title {
+  display: flex;
+  justify-content: center;
+  background-color: var(--ef-bg1);
+  anchor-name: --crs-title-anchor;
+  color: var(--ef-green);
+  border: 2px solid var(--ef-bg2);
+  border-radius: 5px;
+  margin-top: 1em;
+  padding: 0.9rem 1em;
+
+}
+
+.img-carousel::scroll-button(left){
+  right: calc(anchor(left) + 0.5em);
+  bottom: calc(anchor(top) - 2em);
+  box-shadow: 8px -8px 0 0 var(--ef-bg-black);
+
+  content: "◄";
+}
+
+.img-carousel::scroll-button(right){
+  left: calc(anchor(right) + 0.5em);
+  bottom: calc(anchor(top) - 2em);
+  box-shadow: -8px -8px 0 0 var(--ef-bg-black); 
+  content: "►";
+}
+
+.img-carousel::scroll-button(*) {
+  border: none;
+  position: absolute;
+  padding: 0.3em;
+  color: var(--ef-bg1);
+  background-color: var(--ef-green);
+  border-radius: 5px;
+  position-anchor: --crs-title-anchor;
+  font-size: 2em;
+  transition: 
+    transform 0.1s ease,
+    background-color 0.3s ease;
+
+}
+
+.img-carousel::scroll-button(*):active {
+ box-shadow: none;
+ transition: 
+    transform 0.1s ease, 
+} 
+.img-carousel::scroll-button(*):disabled {
+  background-color: var(--ef-fg);
+}
+.img-carousel::scroll-button(*):disabled:hover {
+  background-color: var(--ef-fg-dim);
+}
+.img-carousel::scroll-button(*):hover { 
+ background-color: var(--ef-green-light);
+ transition: 
+    background-color 0.3s ease;
+
+} 
+
+.img-carousel::scroll-button(left):active {
+ transform: translate(8px, -8px);
+} 
+
+.img-carousel::scroll-button(right):active {
+ transform: translate(-8px, -8px);
+} 
+
+
 /* --- table --- */
-
-
+.sv-label {
+  background-color: var(--ef-yellow-light);
+  color: var(--ef-bg0);
+  width: 100%;
+  text-align: center;
+  padding: 0.6em 0em;
+}
 
 table {
   display: table;
@@ -196,12 +280,11 @@ caption h2 {
 td, th{
   padding: 0.5em 0.75em;
   border: 5px solid var(--ef-bg-black);
-
 }
 
 thead {
   color: var(--ef-bg0);
-  background-color: var(--ef-blue);
+  background-color: var(--ef-blue-light);
 }
 
 tbody th {
@@ -217,8 +300,106 @@ tbody td {
 .span-all {
   font-style: italic;
   color: var(--ef-bg0);
-  background-color: var(--ef-red);
+  background-color: var(--ef-red-light);
 }
+
+/* --- Footer --- */ 
+footer {
+  padding: 2rem;
+  text-align:center;
+  background-color: var(--ef-bg-black);
+  color: var(--ef-bg4);
+  font-size: 0.875rem;
+}
+
+footer a {
+  padding: 1.5rem;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+footer p {
+  color: inherit;
+  padding-top: 1.5rem;
+}
+
+/* --- Seach form ---*/
+form {
+  margin-top: 2em;
+}
+form h1 {
+  border-radius: 8px 8px 0 0;
+  color: var(--ef-bg0);
+  display: block;
+  padding: 1em;
+  background-color: var(--ef-blue-light);
+}
+
+form label {
+  color: var(--ef-fg);
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+#main-search {
+  margin-bottom: 1.5em;
+  color: var(--ef-fg);
+  background-color: var(--ef-bg0);
+  border: 3px solid var(--ef-bg-black);
+  width: 85%;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1em 2em;
+
+}
+
+.styled-submit{
+  border: none;
+  margin-left: 1em;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: var(--ef-red);
+  font-family: inherit;
+  font-size: 2rem;
+  padding: 0.6em 1em;
+  box-shadow: 0 var(--ef-bg-black);
+  transition: 
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+.styled-submit:hover {
+  background-color: var(--ef-red-light);
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 0px 0px var(--ef-bg-black);
+  transition: 
+    transform 0.2s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+.styled-submit:active {
+  transform: translateY(5px);
+  box-shadow: none;
+  transition: 
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+
+.styled-submit > .nf{
+  color: var(--ef-bg0);
+}
+
+.form-inner-ctn {
+  border-radius: 0 0 8px 8px;
+  border: 1px solid var(--ef-bg-black);
+  padding: 1em;
+  background-color: var(--ef-bg1);
+}
+
+
 @media (max-width: 1000px) {
     body {
         display: grid;
@@ -232,7 +413,7 @@ tbody td {
 
 @media (max-width: 680px) {
   html {
-    font-size: 14px; /* scales ALL rem units down uniformly */
+    font-size: 14px; /* scales all rem units down uniformly */
   }
 
   nav {
@@ -240,13 +421,8 @@ tbody td {
     padding: 0.25rem 0.5rem;
   }
 
-  nav a {
-    font-size: 0.85rem;
-    padding: 0.6em 0.5em; /* larger tap target on small screens */
-  }
-
   .content-ctn {
-    font-size: 1em;        /* was 1.5em, which made everything huge on phones */
+    font-size: 1em;   
     padding: 1.5rem 1rem;
     row-gap: 1.5rem;
   }
