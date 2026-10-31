@@ -58,10 +58,6 @@ form {
     border-radius: 5px;
 }
 
-.job-info:has(details[open]) { 
-    border-color: var(--ef-green); 
-}
-
 aside {
     float: right;
     width: 25%;
@@ -92,7 +88,12 @@ h2 {
     font-size: 1.375rem;
     padding-top: 18px;
 }
+
 .job-info ul,
+.job-info ol {
+  padding-left: 1.25em;
+}
+
 .job-info li {
     font-size: 1.125rem;
     padding: 4px;

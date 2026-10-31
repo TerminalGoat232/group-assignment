@@ -7,7 +7,7 @@
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/jobs.css" rel="stylesheet">
   </head>
-  <body>
+  <body id="top">
     <header>    
       <nav>
         <a class="logo-lnk" href="index.html">
@@ -37,6 +37,12 @@
 
       <!-- Jobs -->
       <section class="job-info-ctn"> 
+        <!-- 1 Embedded CSS-->
+        <style>
+          .job-info:has(details[open]) { 
+          border-color: var(--ef-green); 
+        }
+        </style>
         <!-- Job 1 -->
         <section aria-labelledby="info1" class="job-info">
           <h2 id="info1">ENERGY RESEARCHER (ENRSC)</h2>
@@ -63,14 +69,14 @@
               <li>Write research papers, reports, and other publications.</li>
             </ul>
             <h3>Requirements:</h3>
-            <ul>
+            <ol type="1">
               <li>Master's degree in Energy, Physics, Engineering or a similar field</li>
               <li>Good experience in energy technologies and policies</li>
               <li>Able to catch-up with trending technologies</li>
               <li>Build models and simulations of energy yield, system performance and lifecycle cost</li>
               <li>Can use data software, tools and understand the usage of AI in workflow.</li>
               <li>Proficient in English, both written and spoken</li>
-            </ul>
+            </ol>
             <br>
             <a href="apply.html" class="apply-link">APPLY FOR THIS POSITION</a>
           </details>
@@ -102,13 +108,13 @@
               <li>Train internal teams on legal risks and contract management.</li>
             </ul>
           <h3>Requirements:</h3>
-            <ul>
-              <li>Law degree</li>
+            <ol type="1">
+              <li>Law degree and admission to the bar or a recognized professional qualification in the relevant jurisdiction.</li>
               <li>3-5 years of experience in commercial, energy, infrastructure or project finance law.</li>
               <li>Experience drafting and negotiating complex commercial contracts.</li>
               <li>Strong analytical, negotiation and communication skills, including explaining legal issues to non-lawyers.</li>
               <li>Proficient in at least English and French, both written and spoken.</li>
-            </ul>
+            </ol>
             <br>
             <a href="apply.html" class="apply-link">APPLY FOR THIS POSITION</a>
           </details>
@@ -141,14 +147,14 @@
               <li>Report on trading performance, positions and market trends to management.</li>
             </ul>
           <h3>Requirements:</h3>
-            <ul>
+            <ol type="1">
               <li>Bachelor's degree in finance, economics, engineering, mathematics or a related field.</li>
               <li>2-4 years of experience in energy trading, power markets or commodity trading.</li>
               <li>Solid understanding of electricity markets, balancing mechanisms and price drivers.</li>
               <li>Strong analytical and quantitative skills, with proficiency in Excel and Python or similar tools.</li>
               <li>Ability to make fast decisions under pressure and communicate clearly with technical and commercial teams.</li>
               <li>Proficient in English, both written and spoken.</li>
-            </ul>
+            </ol>
             <br>
             <a href="apply.html" class="apply-link">APPLY FOR THIS POSITION</a>
           </details>
@@ -157,6 +163,17 @@
       </section>
 
     </main>
+
+    <!-- 1 Inline CSS -->
+    <a href="#top" aria-label="Back to top"
+    style="
+    position: fixed; 
+    right: 1rem; 
+    bottom: 3rem; 
+    font-size:2rem;
+    color:var(--ef-green);
+    "
+    >↑</a>
 
     <footer>
       <a href="https://student-team-aas2h8hq.atlassian.net/jira/software/projects/KAN/boards/1?filter=&amp;groupBy=none&amp;atlOrigin=eyJpIjoiZWYzYWZmYTBiNzQ3NDVjMjk1ZGU0ZjkwNWIyZmEzYTAiLCJwIjoiaiJ9">Jira Project</a> |
