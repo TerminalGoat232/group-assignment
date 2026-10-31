@@ -264,8 +264,7 @@ nav a[aria-current="page"] {
   font-size: 0.88rem;
   color: var(--ef-bg-black);
   margin-block-start: 0.85rem;
-  padding-block-start: 0.65rem;
-  border-top: 1px dashed var(--ef-bg5);
+  padding: 0.5rem;
   line-height: 1.5;
   text-align: left;
 }
@@ -409,6 +408,7 @@ nav a[aria-current="page"] {
   border: 2px solid var(--ef-bg3);
   border-radius: 10px;
   background-color: var(--ef-bg1);
+  padding: 0.75rem;
 }
 
 .fun-facts-table {
