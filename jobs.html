@@ -28,26 +28,33 @@
         </section>
       </div>
         <!-- Search bar -->
-      <section class="job-search-ctn">
-        <form>
-          <label for="search" class="form-label">Search</label>
-          <input type="search" id="search" placeholder="Search jobs.." class="search-field" />
-          <button type="submit" class="search-button">
-            <img 
-            src="images/search.png"
-            alt="Search button">
-          </button>
-        </form>
-      </section>
+      <form method="GET" action="search.html" target="_blank"> 
+        <div class="form-inner-ctn">
+          <label for="search-input" class="form-label">
+            Search jobs
+          </label>
+          <input 
+              type="search" 
+              placeholder="Search jobs" 
+              id="main-search" 
+              required
+          />  
+            <button type="submit" class="styled-submit" aria-label="search">
+              <i class="tile nf nf-seti-search" aria-hidden="true"></i>
+            </button>
+        </div>
+      </form>
 
       <!-- Jobs -->
       <section class="job-info-ctn"> 
+        
         <!-- 1 Embedded CSS-->
         <style>
           .job-info:has(details[open]) { 
           border-color: var(--ef-green); 
         }
         </style>
+
         <!-- Job 1 -->
         <section aria-labelledby="info1" class="job-info">
           <h2 id="info1">ENERGY RESEARCHER (ENRSC)</h2>
@@ -172,11 +179,19 @@
     <!-- 1 Inline CSS -->
     <a href="#top" aria-label="Back to top"
     style="
-    position: fixed; 
-    right: 1rem; 
-    bottom: 3rem; 
-    font-size:2rem;
-    color:var(--ef-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      right: 1.5rem;
+      bottom: 3rem;
+      width: 2.25rem;
+      height: 2.25rem;
+      font-size: 2rem;
+      background-color: var(--ef-red);
+      color: var(--ef-bg0);
+      border-radius: 10px;
+      text-decoration: none;
     "
     >↑</a>
 

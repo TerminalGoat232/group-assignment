@@ -27,12 +27,38 @@ h1 {
 
 /* Search bar */
 form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 2em;
+    width: 100%;
+    max-width: 1000px;
+    margin: 2em auto;
+    padding-bottom: 0;
 }
+
+.form-inner-ctn {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.75em;
+    border-radius: 8px;
+    border: 1px solid var(--ef-bg-black);
+    padding: 1em;
+    background-color: var(--ef-bg1);
+}
+
+#main-search {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+    margin-bottom: 0;
+    padding: 0.6em 1em;
+}
+
+.styled-submit {
+    flex: 0 0 auto;
+    margin-left: 0;
+    font-size: 1.25rem;
+    padding: 0.5em 0.8em;
+}
+
 .form-label {
     /* Hide the label visually but still allow screen reader to read */
     /* visibility:hidden misaligns the search bar from center */
@@ -42,29 +68,6 @@ form {
     overflow: hidden;
     clip-path: inset(50%);
     white-space: nowrap;
-}
-
-.search-field {
-    width: 50%;
-    padding: 1em 2em 1em 1.5em;
-    font-size: 1rem;
-    border: none;
-    border-radius: 15px;
-    outline: none;
-}
-
-.search-button {
-    background: transparent;
-    border: none;
-    outline: none;
-}
-
-.search-button img {
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-    margin-left: -50px;
-    margin-top: 5px;
 }
 
 /* Jobs */
