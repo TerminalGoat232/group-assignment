@@ -9,6 +9,16 @@
   <title>About Us | Susnium Clean Energy (Group G03)</title>
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/about.css" rel="stylesheet">
+  <!-- Embedded CSS requirement: styles the page subtitle banner -->
+  <style>
+    .about-subtitle {
+      color: var(--ef-fg);
+      font-size: 1rem;
+      margin-block-end: 2rem;
+      padding-block-end: 0.75rem;
+      border-bottom: 2px dashed var(--ef-bg5);
+    }
+  </style>
 </head>
 
 <body>
@@ -25,7 +35,12 @@
   </header>
 
   <main class="page-shell">
-    <h1>About Us &mdash; Group G03</h1>
+    <h1>About Us &mdash; <span style="color: var(--ef-green); font-style: italic;">Group G03</span></h1>
+    <p class="about-subtitle">
+      Sustainable Energy Solutions Company &middot; COS10026 Web Technology Project Team Profile.
+    </p>
+
+    <!-- Group Dossier (Nested List) & Group Photo (Figure) -->
     <div class="about-overview-grid">
       <section class="about-section" aria-labelledby="group-info-heading">
         <div class="section-bar">
@@ -38,6 +53,7 @@
             Group Identity
             <ul>
               <li><strong>Group Name:</strong> Susnium&trade; Clean Energy (Group G03)</li>
+              <li><strong>Allocated Industry:</strong> G03 &mdash; Sustainable Energy Solutions Company</li>
               <li><strong>Unit Code &amp; Title:</strong> COS10026 &mdash; Web Technology Project</li>
               <li><strong>Campus &amp; Tutor:</strong> Swinburne University &middot; Tutor: Mr. Son Phong Nguyen</li>
             </ul>
@@ -69,6 +85,7 @@
       <section class="about-section" aria-labelledby="group-photo-heading">
         <div class="section-bar">
           <h2 id="group-photo-heading">Team Group Photo</h2>
+          <span class="section-bar-tag">148 KB (&lt; 300 KB)</span>
         </div>
         <figure class="group-photo-figure">
           <img id="group-photo-img" src="images/group-photo.jpg"
@@ -82,6 +99,7 @@
       </section>
     </div>
 
+    <!-- Member Contributions & Multilingual Quotes (Definition List) -->
     <section class="about-section" aria-labelledby="contributions-heading">
       <h2 class="sv-label" id="contributions-heading">Member Contributions &amp; Multilingual Quotes</h2>
 
@@ -188,6 +206,7 @@
       </dl>
     </section>
 
+    <!-- Fun Facts Table with Caption, Hex Colours & Hover Effects -->
     <section class="about-section" aria-labelledby="fun-facts-caption">
       <div tabindex="0" role="region" aria-labelledby="fun-facts-caption" class="table-wrapper">
         <table class="fun-facts-table" id="fun-facts-table">
@@ -207,7 +226,7 @@
           <tbody id="fun-facts-tbody">
             <tr>
               <th scope="row">Nguyen Le Quoc Bao</th>
-              <td>106245001</td>
+              <td><span class="code-badge">106245001</span></td>
               <td>Hue, Viet Nam</td>
               <td>University Lecturer</td>
               <td>Nachos, crunchy rice cake</td>
@@ -215,7 +234,7 @@
             </tr>
             <tr>
               <th scope="row">Dang Nhat Minh</th>
-              <td>106671774</td>
+              <td><span class="code-badge">106671774</span></td>
               <td>Quy Nhon, Viet Nam</td>
               <td>None</td>
               <td>Chocolate</td>
@@ -223,7 +242,7 @@
             </tr>
             <tr>
               <th scope="row">Nguyen Huy Thanh</th>
-              <td>106216227</td>
+              <td><span class="code-badge">106216227</span></td>
               <td>Da Nang, Viet Nam</td>
               <td>Senior Software Engineer</td>
               <td>Tap Water</td>
@@ -231,7 +250,7 @@
             </tr>
             <tr>
               <th scope="row">Nguyen Phuong Anh</th>
-              <td>106249320</td>
+              <td><span class="code-badge">106249320</span></td>
               <td>Quang Binh, Viet Nam</td>
               <td>Coder</td>
               <td>Milktea and snacks</td>
@@ -239,7 +258,7 @@
             </tr>
             <tr>
               <th scope="row">Truong Hoang Dat</th>
-              <td>106367141</td>
+              <td><span class="code-badge">106367141</span></td>
               <td>Da Nang, Viet Nam</td>
               <td>Coder AI Development</td>
               <td>Milktea and Python</td>
@@ -250,6 +269,7 @@
       </div>
     </section>
 
+    <!-- Acknowledgement of Country & Indigenous / Regional Community Commitment -->
     <section class="about-section" aria-labelledby="acknowledgement-heading">
       <div class="section-bar">
         <h2 id="acknowledgement-heading">Acknowledgement of Country &amp; Community Commitment (Viet Nam &amp; Australia)</h2>
