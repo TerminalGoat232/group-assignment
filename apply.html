@@ -255,25 +255,24 @@
 
               <div class="form-group">
                 <label for="postcode">Postcode / Postal Code <span class="req-marker" aria-hidden="true">*</span></label>
-                <span id="postcode-hint" class="field-hint">4 digits (or 4&ndash;10 chars for international).</span>
+                <span id="postcode-hint" class="field-hint">4 digits (AU) or 4&ndash;10 chars (International).</span>
                 <input
                   type="text"
                   id="postcode"
                   name="postcode"
                   minlength="4"
-                  maxlength="4"
-                  pattern="[0-9]{4}"
-                  inputmode="numeric"
+                  maxlength="10"
+                  pattern="([0-9]{4}|[A-Za-z0-9 \-]{4,10})"
                   placeholder="e.g. 3122 or 550000"
                   autocomplete="postal-code"
                   aria-describedby="postcode-hint"
                   aria-errormessage="postcode-error"
-                  title="Enter 4 digits (or 4-10 postal characters for international regions)."
+                  title="Enter 4 digits for Australia or 4-10 postal characters for international regions."
                   required
                 >
                 <div id="postcode-error" class="error-msg" aria-live="polite">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-                  <span>Enter a valid postal code for the selected region.</span>
+                  <span>Enter a valid 4-digit Australian postcode or 4&ndash;10 character postal code.</span>
                 </div>
               </div>
             </div>
@@ -339,30 +338,30 @@
             <div class="form-group">
               <fieldset class="sub-fieldset" id="skills-fieldset">
                 <legend>Skill List <span class="req-marker" aria-hidden="true">*</span></legend>
-                <span id="skills-hint" class="field-hint">Check all relevant skills (at least one selection is required).</span>
+                <span id="skills-hint" class="field-hint">Check all relevant skills (core renewable energy competency is required).</span>
                 <div class="checkbox-grid" role="group" aria-describedby="skills-hint">
                   <div class="choice-item">
                     <input type="checkbox" id="skill-renewable" name="skills[]" value="Renewable Energy Systems" checked required>
                     <label for="skill-renewable">Renewable Energy Systems &amp; Grid Tech</label>
                   </div>
                   <div class="choice-item">
-                    <input type="checkbox" id="skill-data" name="skills[]" value="Data Modelling & Analytics" required>
+                    <input type="checkbox" id="skill-data" name="skills[]" value="Data Modelling & Analytics">
                     <label for="skill-data">Data Modelling, Python &amp; AI Workflows</label>
                   </div>
                   <div class="choice-item">
-                    <input type="checkbox" id="skill-web" name="skills[]" value="Web & Telemetry Dashboards" required>
+                    <input type="checkbox" id="skill-web" name="skills[]" value="Web & Telemetry Dashboards">
                     <label for="skill-web">Web Architecture &amp; Telemetry Dashboards</label>
                   </div>
                   <div class="choice-item">
-                    <input type="checkbox" id="skill-legal" name="skills[]" value="Energy Law & Regulatory Compliance" required>
+                    <input type="checkbox" id="skill-legal" name="skills[]" value="Energy Law & Regulatory Compliance">
                     <label for="skill-legal">Energy Law, Contracts &amp; Policy Compliance</label>
                   </div>
                   <div class="choice-item">
-                    <input type="checkbox" id="skill-pm" name="skills[]" value="Project Management & Safety" required>
+                    <input type="checkbox" id="skill-pm" name="skills[]" value="Project Management & Safety">
                     <label for="skill-pm">Infrastructure Project Management</label>
                   </div>
                   <div class="choice-item">
-                    <input type="checkbox" id="skill-other" name="skills[]" value="Other Skills" required>
+                    <input type="checkbox" id="skill-other" name="skills[]" value="Other Skills">
                     <label for="skill-other">Other Specialist Skills (detail below)</label>
                   </div>
                 </div>
@@ -391,7 +390,7 @@
         <aside class="apply-aside" aria-labelledby="open-roles-heading">
           <h2 id="open-roles-heading">Open Job Reference Codes</h2>
           <p style="font-size: 0.9rem;">
-            Select a position code below to populate the Job Reference Number field, or review full role specifications on the <a href="jobs.html">Career page</a>.
+            Enter one of the 5-character reference codes below into the Job Reference Number field, or review full role specifications on the <a href="jobs.html">Career page</a>.
           </p>
           <ul class="ref-card-list">
             <li class="ref-card-item">
@@ -399,14 +398,14 @@
                 <strong style="color: var(--ef-fg-strong); display: block; font-size: 0.95rem;">Energy Researcher</strong>
                 <span class="code-badge">ENRSC</span>
               </div>
-              <button type="button" class="btn-chip fill-ref-btn" data-ref="ENRSC">Use ENRSC</button>
+              <a href="jobs.html" class="btn-chip">View Role</a>
             </li>
             <li class="ref-card-item">
               <div>
                 <strong style="color: var(--ef-fg-strong); display: block; font-size: 0.95rem;">Legal Counsel</strong>
                 <span class="code-badge">LGCSL</span>
               </div>
-              <button type="button" class="btn-chip fill-ref-btn" data-ref="LGCSL">Use LGCSL</button>
+              <a href="jobs.html" class="btn-chip">View Role</a>
             </li>
           </ul>
         </aside>
@@ -418,43 +417,5 @@
       <a href="https://github.com/terminalgoat232/group-assignment">GitHub</a> |
       <a href="mailto:info@susnium.com">info@susnium.com</a>
     </footer>
-
-    <script>
-      (function () {
-        const form = document.getElementById('job-application-form');
-        const jobRef = document.getElementById('job-ref');
-        const state = document.getElementById('state');
-        const postcode = document.getElementById('postcode');
-        const postcodeHint = document.getElementById('postcode-hint');
-        const skills = Array.from(document.querySelectorAll('#skills-fieldset input[type="checkbox"]'));
-        const auStates = new Set(['VIC', 'NSW', 'QLD', 'NT', 'WA', 'SA', 'TAS', 'ACT']);
-
-        function syncRegion() {
-          const intl = state.value && !auStates.has(state.value);
-          postcode.maxLength = intl ? 10 : 4;
-          postcode.pattern = intl ? '[A-Za-z0-9 \\-]{4,10}' : '[0-9]{4}';
-          postcode.inputMode = intl ? 'text' : 'numeric';
-          postcodeHint.textContent = intl ? '4–10 characters (VN / International postal code).' : '4 digits (or 4–10 chars for international).';
-        }
-
-        function syncSkills() {
-          const checked = skills.some((c) => c.checked);
-          skills.forEach((c) => { c.required = checked ? c.checked : true; });
-        }
-
-        state.addEventListener('change', syncRegion);
-        skills.forEach((c) => c.addEventListener('change', syncSkills));
-        syncSkills();
-
-        document.querySelectorAll('.fill-ref-btn').forEach((b) => {
-          b.addEventListener('click', () => { jobRef.value = b.dataset.ref; jobRef.focus(); });
-        });
-
-        const syncAria = (el) => el.checkValidity && el.setAttribute('aria-invalid', String(el.matches(':user-invalid')));
-        form.addEventListener('blur', (e) => syncAria(e.target), true);
-        form.addEventListener('input', (e) => e.target.hasAttribute('aria-invalid') && syncAria(e.target));
-        form.addEventListener('reset', () => setTimeout(() => { syncRegion(); syncSkills(); }, 0));
-      })();
-    </script>
   </body>
 </html>

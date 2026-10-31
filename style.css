@@ -16,10 +16,6 @@ html {
   caret-color: var(--ef-green-ink);
 }
 
-html[data-allow-edit="false"] .edit-only-ui {
-  display: none !important;
-}
-
 ::selection {
   background-color: var(--ef-green);
   color: var(--ef-bg0);
@@ -891,40 +887,6 @@ figcaption {
 .btn-chip:hover {
   background-color: var(--ef-valid-bg);
   border-color: var(--ef-valid-border);
-}
-
-.edit-bar {
-  background-color: var(--ef-bg1);
-  border: 2px solid var(--ef-valid-border);
-  border-radius: 10px;
-  padding: 0.85rem 1.15rem;
-  margin-block-end: 2rem;
-  display: none;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.85rem;
-}
-
-.edit-bar.is-active {
-  display: flex;
-}
-
-.edit-bar label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--ef-fg-strong);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  cursor: pointer;
-}
-
-[contenteditable="true"] {
-  outline: 2px dashed var(--ef-green-ink);
-  outline-offset: 2px;
-  background-color: var(--ef-valid-bg);
-  border-radius: 4px;
 }
 
 @media (pointer: coarse) {
