@@ -414,14 +414,17 @@ form label {
 
 @media (max-width: 680px) {
   html {
-    font-size: 14px; /* scales all rem units down uniformly */
+    font-size: 12px;
   }
-
   nav {
     gap: 0;
     padding: 0.25rem 0.5rem;
   }
 
+  nav a:not(.logo-lnk) {
+    padding-top: 1em;
+  }
+  
   .content-ctn {
     font-size: 1em;   
     padding: 1.5rem 1rem;
@@ -432,7 +435,6 @@ form label {
     padding: 1rem;
   }
 
-  /* Four tiles in one row, with a real gap under the card */
   .energ-type-ctn {
     width: 100%;
     margin: 0;
@@ -440,9 +442,8 @@ form label {
     gap: 0.5rem;
   }
 
-  /* .energ-type-ctn .tile beats the embedded .nf rule in index.html */
   .energ-type-ctn .tile {
-    font-size: 2.25rem;
+    font-size: 3rem;
     padding: 0;
     border-radius: 14px;
   }
@@ -453,5 +454,12 @@ form label {
 
   figure img {
     border-radius: 20px;
+    max-height: 200px;
   }
+
+  #main-search {
+    width: 75%;
+  }
+
+
 }
