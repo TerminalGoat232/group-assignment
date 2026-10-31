@@ -309,9 +309,8 @@ nav a[aria-current="page"] {
 
 /* --- Fun Facts Table (Hex Colours & Hover Effects) --- */
 .table-wrapper {
-  overflow: auto;
+  overflow-x: auto;
   max-inline-size: 100%;
-  max-block-size: min(620px, 80vh);
   container-type: inline-size;
   border: 2px solid #e6e2cc;
   border-radius: 10px;
@@ -396,7 +395,7 @@ nav a[aria-current="page"] {
     clip-path: inset(50%);
     white-space: nowrap;
   }
-  .fun-facts-table, .fun-facts-table tbody, .fun-facts-table tr, .fun-facts-table th, .fun-facts-table td {
+  .fun-facts-table, .fun-facts-table caption, .fun-facts-table tbody, .fun-facts-table tr, .fun-facts-table th, .fun-facts-table td {
     display: block;
     width: 100%;
   }
