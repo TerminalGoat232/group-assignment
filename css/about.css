@@ -15,16 +15,6 @@
   --ef-purple: #6e2558;
 }
 
-nav a:not(.logo-lnk) {
-  color: #1e2326;
-}
-
-nav a:not(.logo-lnk):hover,
-nav a[aria-current="page"] {
-  color: #364904;
-  text-decoration-color: #364904;
-}
-
 /* --- Page Shell & Responsive Grid Layout --- */
 .page-shell {
   width: min(85rem, 100%);
@@ -100,14 +90,14 @@ nav a[aria-current="page"] {
   padding: 1.35rem 1.35rem 1.35rem 2.25rem;
 }
 
-.group-nested-list > li {
+.group-nested-list>li {
   margin-block-end: 1.15rem;
   color: var(--ef-red);
   font-weight: 600;
   font-size: 1.375rem;
 }
 
-.group-nested-list > li:last-child {
+.group-nested-list>li:last-child {
   margin-block-end: 0;
 }
 
@@ -339,7 +329,8 @@ nav a[aria-current="page"] {
   border-radius: 6px 6px 0 0;
 }
 
-.fun-facts-table th, .fun-facts-table td {
+.fun-facts-table th,
+.fun-facts-table td {
   padding: 0.85rem 1rem;
   border: none;
   border-bottom: 1px solid #e0dcc7;
@@ -387,6 +378,7 @@ nav a[aria-current="page"] {
     --label-5: "Coding Snack";
     --label-6: "Fun Fact / Hobby";
   }
+
   .fun-facts-table thead {
     position: absolute;
     width: 1px;
@@ -395,29 +387,63 @@ nav a[aria-current="page"] {
     clip-path: inset(50%);
     white-space: nowrap;
   }
-  .fun-facts-table, .fun-facts-table caption, .fun-facts-table tbody, .fun-facts-table tr, .fun-facts-table th, .fun-facts-table td {
+
+  .fun-facts-table,
+  .fun-facts-table caption,
+  .fun-facts-table tbody,
+  .fun-facts-table tr,
+  .fun-facts-table th,
+  .fun-facts-table td {
     display: block;
     width: 100%;
   }
+
   .fun-facts-table tbody tr {
     border-bottom: 3px solid #e0dcc7;
     padding-block: 0.5rem;
     background-color: #fdf6e3;
   }
+
   .fun-facts-table tbody th[scope="row"] {
     background-color: #e6e2cc;
     padding: 0.6rem 1rem;
     font-size: 1.25rem;
   }
+
   .fun-facts-table td {
     padding: 0.65rem 1rem;
     border-bottom: 1px solid #efebd4;
   }
-  .fun-facts-table td:nth-child(2)::before { content: var(--label-2) ": "; font-weight: 600; color: #1e2326; }
-  .fun-facts-table td:nth-child(3)::before { content: var(--label-3) ": "; font-weight: 600; color: #1e2326; }
-  .fun-facts-table td:nth-child(4)::before { content: var(--label-4) ": "; font-weight: 600; color: #1e2326; }
-  .fun-facts-table td:nth-child(5)::before { content: var(--label-5) ": "; font-weight: 600; color: #1e2326; }
-  .fun-facts-table td:nth-child(6)::before { content: var(--label-6) ": "; font-weight: 600; color: #1e2326; }
+
+  .fun-facts-table td:nth-child(2)::before {
+    content: var(--label-2) ": ";
+    font-weight: 600;
+    color: #1e2326;
+  }
+
+  .fun-facts-table td:nth-child(3)::before {
+    content: var(--label-3) ": ";
+    font-weight: 600;
+    color: #1e2326;
+  }
+
+  .fun-facts-table td:nth-child(4)::before {
+    content: var(--label-4) ": ";
+    font-weight: 600;
+    color: #1e2326;
+  }
+
+  .fun-facts-table td:nth-child(5)::before {
+    content: var(--label-5) ": ";
+    font-weight: 600;
+    color: #1e2326;
+  }
+
+  .fun-facts-table td:nth-child(6)::before {
+    content: var(--label-6) ": ";
+    font-weight: 600;
+    color: #1e2326;
+  }
 }
 
 @media (max-width: 960px) {
