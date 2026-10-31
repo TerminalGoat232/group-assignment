@@ -3,81 +3,221 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home | Susnium Clean Energy</title>
-    <link href="style.css" rel="stylesheet">
-    <style>
-      .hero_ctn {
-        padding: clamp(3rem, 10vw, 8rem) 2rem;
-      }
+    <title>A1 project idk</title>
+    <link href="css/styles.css" rel="stylesheet">
+ 
+  <style>   
+    p {
+      color: var(--ef-fg);
+    }
 
-      .hero_title {
-        font-size: clamp(2rem, 7vw, 4.5rem);
-        font-weight: 600;
-        color: var(--ef-bg0);
-      }
+    li .nf {
+      font-size: 5.875em;
+      padding: 0.5em;
+      border-radius:25px; 
+      transition: color 0.5s ease;
+    }
+    
+    body:has(.nf-md-wind_power_outline:hover) .wind-txt {
+      color: var(--ef-cyan);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
 
-      .nf {
-        font-size: 5.875em;
-        padding: 0.5em;
-        border-radius: 25px;
-        transition: color 0.5s ease;
-      }
+    body:has(.nf-md-solar_power_variant_outline:hover) .rt-sol-txt {
+      color: var(--ef-orange);
+      font-weight: 600;
+    }
+    
+    body:has(.nf-md-waterfall:hover) .water-txt {
+      color: var(--ef-blue);
+      font-weight: 600;
 
-      .nf:hover {
-        color: var(--ef-bg0);
-        transition: color 0.2s ease;
-      }
-    </style>
+    }
+
+    body:has(.nf-fae-atom:hover) .nu-txt {
+      color: var(--ef-green);
+      font-weight: 600;
+
+    }
+    li .nf:hover {
+      color:var(--ef-bg2);
+    }
+
+  </style>
   </head>
   <body>
     <header>
-      <nav aria-label="Primary Navigation">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="about.html">About us</a>
-        <a href="apply.html">Join us</a>
-        <a href="jobs.html">Career</a>
-      </nav>
 
-      <div class="bg-overlay">
-        <section class="hero_ctn">
-          <p class="hero_title">
-            Powering communities with
-            <span class="hl-green">clean energy</span>
-          </p>
-        </section>
-      </div>
+        <nav>
+          <a class="logo-lnk" href="index.html">
+            <img class="logo" src="images/logo_1.png" alt="Company Logo">
+          </a>
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html" >About us</a>
+          <a href="apply.html">Join us</a>
+          <a href="jobs.html">Jobs</a>
+        </nav>
+
+        <div class = "bg-overlay">
+          <section class="hero_ctn">
+            <p class="hero_title">
+              Susnium Renewables <br> Powering communities with 
+              <span 
+                style="all: inherit; 
+                background-color:var(--ef-green); 
+                width: fit-content;
+                padding: 0.1em 0.2em;
+                border-radius: 10px;
+                font-style:italic;">
+                clean energy
+              </span>
+            </p>
+          </section>
+        </div>
     </header>
 
     <main>
+      <!-- A short description about the company-->
       <div class="content-ctn">
         <div class="desc-ctn">
-          <h1>What do we actually do?</h1>
-          <p>
-            Susnium&trade; designs, builds, and operates clean energy infrastructure around the world. Our projects range from <span class="rt-sol-txt">rooftop solar</span> for homes and businesses to utility-scale <span class="wind-txt">wind</span>, <span class="water-txt">hydro</span>, and <span class="nu-txt">nuclear</span> power plants. We stay with each project after it is built, using monitoring technology and a dedicated maintenance team to keep it running reliably. We also build the public websites and dashboards that let communities see how their local project is performing.
-          </p>
+          <h1> What do we actually do<span style="font-size:1.3em">?</span> </h1>
+            <hr style=
+                "margin: 2rem 0rem; 
+                 color: var(--ef-bg1);
+                 border: 0;
+                 border-top: 5px dashed var(--ef-bg5);"
+            >
+            <p>Susnium&trade; designs, builds, and operates clean energy infrastructure around the world. Our projects range from <span class="rt-sol-txt">rooftop solar</span> for homes and businesses to utility-scale <span class="wind-txt">wind</span>, <span class="water-txt">hydro</span>, and <span class="nu-txt">nuclear</span> power plants. We stay with each project after it is built, using monitoring technology and a dedicated maintenance team to keep it running reliably. We also build the public websites and dashboards that let communities see how their local project is performing.</p>
         </div>
-
+          <!-- <div class="dummy"></div> -->
         <ul class="energ-type-ctn" aria-label="Energy types we work with">
-          <li><i style="background-color: var(--ef-cyan)" class="tile nf nf-md-wind_power_outline" aria-hidden="true"></i></li>
-          <li><i style="background-color: var(--ef-orange)" class="tile nf nf-md-solar_power_variant_outline" aria-hidden="true"></i></li>
-          <li><i style="background-color: var(--ef-blue)" class="tile nf nf-md-waterfall" aria-hidden="true"></i></li>
-          <li><i style="background-color: var(--ef-green)" class="tile nf nf-fae-atom" aria-hidden="true"></i></li>
+            <li><i style="background-color:var(--ef-cyan-light)" class="tile nf nf-md-wind_power_outline" aria-hidden="true"></i></li>
+            <li><i style="background-color:var(--ef-orange-light)" class="tile nf nf-md-solar_power_variant_outline" aria-hidden="true"></i></li>
+            <li><i style="background-color:var(--ef-blue-light)" class="tile nf nf-md-waterfall" aria-hidden="true"></i></li>
+            <li><i style="background-color:var(--ef-green-light)" class="tile nf nf-fae-atom" aria-hidden="true"></i></li>
         </ul>
 
-        <figure>
-          <img
-            src="images/operating-site.jpg"
-            alt="Picture of our nuclear and wind powerplant in Ninh Thuan, VN"
-          >
-          <figcaption>A look at our nuclear and wind powerplant in Ninh Thuan, VN</figcaption>
-        </figure>
-      </div>
-    </main>
+      <!-- An image suggesting how the operating site looks like-->
 
+      <h1 id="crs-title"> Our achievements </h1>
+      <ul class="img-carousel">
+        <li>
+          <figure>
+            <img 
+                  src="images/operating-site.jpg" 
+                  alt="A wind turbine beside two nuclear cooling towers over a yellow rapeseed field"
+            >
+            <figcaption>
+              Nuclear and wind generation working side by side at our Ninh Thuan complex, 🇻🇳.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img 
+                  src="images/sol-panel.jpg" 
+                  alt="Rows of ground-mounted solar panels on a grassy hillside"
+            >
+            <figcaption>
+              A solar farm we built and now maintain near Mildura, Victoria, 🇦🇺.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img 
+                  src="images/wind-site.png" 
+                  alt="A row of wind turbines across green farmland under a clear blue sky"
+            >
+            <figcaption>
+              Utility-scale wind turbines we installed across open farmland in Tehachapi, California, 🇺🇸.
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img 
+                  src="images/hydro-pwr.jpg" 
+                  alt="Aerial view of a hydroelectric dam with water rushing through its spillways"
+            >
+            <figcaption>
+              A hydropower dam we monitor and maintain at Hoa Binh, 🇻🇳.
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+   
+      <!-- Table including various services-->
+      <table>
+        <caption><h2 class="sv-label"> Our top services </h2></caption>
+        <thead>
+          <tr>
+            <th scope="col">Area</th>
+            <th scope="col">Service</th>
+            <th scope="col">Suited to</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="rowgroup" rowspan="4">Generation</th>
+            <td>Rooftop solar</td>
+            <td>Homes and businesses</td>
+          </tr>
+          <tr>
+            <td>Utility-scale wind</td>
+            <td>Regional grids</td>
+          </tr>
+          <tr>
+            <td>Hydro</td>
+            <td>Regional grids</td>
+          </tr>
+          <tr>
+            <td>Nuclear power plants</td>
+            <td>National base load</td>
+          </tr>
+          <tr>
+            <th scope="rowgroup" rowspan="2">Technology</th>
+            <td>Monitoring and maintenance</td>
+            <td>Plant operators</td>
+          </tr>
+          <tr>
+            <td>Public websites and dashboards</td>
+            <td>Local communities</td>
+          </tr>
+          <tr>
+            <td class="span-all" colspan="3">Every service includes community consultation before construction begins.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Search box -->
+      <form method="GET" action="search.html" target="_blank"> 
+        <h1> Find what you're looking for! </h1>
+        <div class="form-inner-ctn">
+          <label for="search-input" class="form-label">
+            Search services, projects or jobs
+          </label>
+          <input 
+              type="search" 
+              placeholder="Price, Technologies, etc..." 
+              id="main-search" 
+              required
+          />  
+            <button type="submit" class="styled-submit" aria-label="search">
+              <i class="tile nf nf-seti-search" aria-hidden="true"></i>
+            </button>
+        </div>
+      </form>
+
+     </div>
+    </main>
+    <!-- The page's footer-->
     <footer>
       <a href="https://student-team-aas2h8hq.atlassian.net/jira/software/projects/KAN/boards/1?filter=&amp;groupBy=none&amp;atlOrigin=eyJpIjoiZWYzYWZmYTBiNzQ3NDVjMjk1ZGU0ZjkwNWIyZmEzYTAiLCJwIjoiaiJ9">Jira Project</a> |
       <a href="https://github.com/terminalgoat232/group-assignment">GitHub</a> |
       <a href="mailto:info@susnium.com">info@susnium.com</a>
+      <p> &copy 2026 Susnium Electric Company </p>
     </footer>
   </body>
 </html>
