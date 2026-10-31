@@ -1,19 +1,64 @@
 @import "colorscheme.css";
 
+.h1_ctn {
+    width: 100%;
+    padding: clamp(3rem, 10vw, 8rem) 2rem;
+}
 h1 {
     text-align: center;
-    font-size: 2.5rem;
-    padding-top: 20px;
+    font-size: clamp(2rem, 7vw, 4.5rem);
+    font-weight: 600;
+    color: var(--ef-bg4);
+}
+.bg-overlay {
+    background-image:
+        linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.60) 45%,
+        rgba(0, 0, 0, 0.15) 100%
+        ), url('../images/hydro-pwr.jpg');
+    background-size: cover;
+    background-position: bottom;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
 }
 
 /* Search bar */
 form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 2em auto;
+    padding-bottom: 0;
 }
+
+.form-inner-ctn {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.75em;
+    border-radius: 8px;
+    border: 1px solid var(--ef-bg-black);
+    padding: 1em;
+    background-color: var(--ef-bg1);
+}
+
+#main-search {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+    margin-bottom: 0;
+    padding: 0.6em 1em;
+}
+
+.styled-submit {
+    flex: 0 0 auto;
+    margin-left: 0;
+    font-size: 1.25rem;
+    padding: 0.5em 0.8em;
+}
+
 .form-label {
     /* Hide the label visually but still allow screen reader to read */
     /* visibility:hidden misaligns the search bar from center */
@@ -25,41 +70,15 @@ form {
     white-space: nowrap;
 }
 
-.search-field {
-    width: 50%;
-    padding: 10px 30px 10px 15px;
-    border: none;
-    border-radius: 30px;
-    outline: none;
-}
-
-.search-button {
-    background: transparent;
-    border: none;
-    outline: none;
-}
-
-.search-button img {
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-    margin-left: -50px;
-    margin-top: 5px;
-}
-
 /* Jobs */
 .job-info {
     background: var(--ef-bg1);
     border: 3px solid var(--ef-bg2);
-    padding: 20px;
+    padding: 3em;
     max-width: 1200px;
     margin:  auto;
     box-sizing: border-box;
     border-radius: 5px;
-}
-
-.job-info:has(details[open]) { 
-    border-color: var(--ef-green); 
 }
 
 aside {
@@ -75,11 +94,13 @@ aside {
 h2 {
     font-size: 1.875rem;
 }
+
 .job-desc {
     font-size: 1.25rem;
     font-style: italic;
     padding-top: 4px;
 }
+
 .job-info summary {
     padding: 10px;
     font-size: 1.125rem;
@@ -92,7 +113,12 @@ h2 {
     font-size: 1.375rem;
     padding-top: 18px;
 }
+
 .job-info ul,
+.job-info ol {
+  padding-left: 1.25em;
+}
+
 .job-info li {
     font-size: 1.125rem;
     padding: 4px;
