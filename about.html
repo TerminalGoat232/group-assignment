@@ -1,31 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>A1 project idk</title>
-    <link href="css/styles.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>    
-      <nav>
-        <a class="logo-lnk" href="index.html">
-          <img class="logo" src="images/logo_1.png" alt="Company Logo">
-        </a>
-        <a href="index.html">Home</a>
-        <a href="about.html" aria-current="page">About us</a>
-        <a href="apply.html">Join us</a>
-        <a href="jobs.html">Jobs</a>
-      </nav>
-    </header>
-    <main>
-      
-    </main>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="About Susnium Clean Energy Group G03 — COS10026 Web Technology Project team profile, member contributions, quotes, and fun facts.">
+  <title>About Us | Susnium Clean Energy (Group G03)</title>
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/about.css" rel="stylesheet">
+  <!-- Embedded CSS requirement: styles the page subtitle banner -->
+  <style>
+    .about-subtitle {
+      color: var(--ef-fg);
+      font-size: 1rem;
+      margin-block-end: 2rem;
+      padding-block-end: 0.75rem;
+      border-bottom: 2px dashed var(--ef-bg5);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="logo-lnk" href="index.html">
+        <img class="logo" src="images/logo_1.png" alt="Company Logo">
+      </a>
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">About us</a>
+      <a href="apply.html">Join us</a>
+      <a href="jobs.html">Jobs</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <h1>About Us &mdash; <span style="color: var(--ef-green); font-style: italic;">Group G03</span></h1>
+    <p class="about-subtitle">
+      Sustainable Energy Solutions Company &middot; COS10026 Web Technology Project Team Profile.
+    </p>
+
+    <!-- Group Dossier (Nested List) & Group Photo (Figure) -->
+    <div class="about-overview-grid">
+      <section class="about-section" aria-labelledby="group-info-heading">
+        <div class="section-bar">
+          <h2 id="group-info-heading">Group Dossier &amp; Class Schedule</h2>
+          <span class="section-bar-tag">COS10026 &middot; G03</span>
+        </div>
+
+        <ul class="group-nested-list" id="group-nested-list">
+          <li>
+            Group Identity
+            <ul>
+              <li><strong>Group Name:</strong> Susnium&trade; Clean Energy (Group G03)</li>
+              <li><strong>Allocated Industry:</strong> G03 &mdash; Sustainable Energy Solutions Company</li>
+              <li><strong>Unit Code &amp; Title:</strong> COS10026 &mdash; Web Technology Project</li>
+              <li><strong>Campus &amp; Tutor:</strong> Swinburne University &middot; Tutor: Mr. Son Phong Nguyen</li>
+            </ul>
+          </li>
+          <li>
+            Class Day &amp; Time Schedule
+            <ul>
+              <li>
+                <strong>Lecture Session:</strong>
+                <ul>
+                  <li>Day: Saturday &middot; Time: 01:00 PM &ndash; 05:00 PM</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Team Roster &amp; Student IDs
+            <ul id="roster-nested-sublist">
+              <li>Nguyen Le Quoc Bao &mdash; <span class="code-badge">106245001</span></li>
+              <li>Dang Nhat Minh &mdash; <span class="code-badge">106671774</span></li>
+              <li>Nguyen Huy Thanh &mdash; <span class="code-badge">106216227</span></li>
+              <li>Nguyen Phuong Anh &mdash; <span class="code-badge">106249320</span></li>
+              <li>Truong Hoang Dat &mdash; <span class="code-badge">106367141</span></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="about-section" aria-labelledby="group-photo-heading">
+        <div class="section-bar">
+          <h2 id="group-photo-heading">Team Group Photo</h2>
+          <span class="section-bar-tag">148 KB (&lt; 300 KB)</span>
+        </div>
+        <figure class="group-photo-figure">
+          <img id="group-photo-img" src="images/group-photo.jpg"
+            alt="Group G03 Susnium engineering team standing together outside the solar-powered campus building"
+            width="1120" height="625">
+          <figcaption>
+            <span class="photo-meta-pill">FIG 01 &middot; GROUP PORTRAIT</span>
+            <span id="group-photo-caption-text">Group G03 members collaborating outside the solar-equipped engineering complex.</span>
+          </figcaption>
+        </figure>
+      </section>
+    </div>
+
+    <!-- Member Contributions & Multilingual Quotes (Definition List) -->
+    <section class="about-section" aria-labelledby="contributions-heading">
+      <h2 class="sv-label" id="contributions-heading">Member Contributions &amp; Multilingual Quotes</h2>
+
+      <dl class="contributions-dl" id="members-dl">
+        <dt>
+          <span class="member-name">Nguyen Le Quoc Bao</span>
+          <span class="code-badge">ID: 106245001</span>
+          <span class="member-role-tag">Leader</span>
+        </dt>
+        <dd class="dd-contribution">
+          <strong>Contributions:</strong> Responsible for designing the main page (<code>index.html</code>), managing the overall CSS, and reviewing pull requests.
+        </dd>
+        <dd class="dd-quote">
+          <div class="quote-box">
+            <blockquote class="quote-native" lang="vi">
+              <span class="quote-lang-tag">Vietnamese</span>
+              &ldquo;<span class="quote-native-text">Kiến thức b&oacute;ng tinh nhuệ</span>&rdquo;
+            </blockquote>
+            <p class="quote-translation">
+              <strong>English Translation:</strong> &ldquo;<span class="quote-en-text">Elite ball knowledge</span>&rdquo;
+            </p>
+          </div>
+        </dd>
+
+        <dt>
+          <span class="member-name">Dang Nhat Minh</span>
+          <span class="code-badge">ID: 106671774</span>
+          <span class="member-role-tag">Developer</span>
+        </dt>
+        <dd class="dd-contribution">
+          <strong>Contributions:</strong> Implemented the <code>jobs.html</code> page, its CSS styling, and provided feedback to teammates.
+        </dd>
+        <dd class="dd-quote">
+          <div class="quote-box">
+            <blockquote class="quote-native" lang="fr">
+              <span class="quote-lang-tag">French</span>
+              &ldquo;<span class="quote-native-text">Vouloir c&rsquo;est pouvoir</span>&rdquo;
+            </blockquote>
+            <p class="quote-translation">
+              <strong>English Translation:</strong> &ldquo;<span class="quote-en-text">Where there&rsquo;s a will, there&rsquo;s a way</span>&rdquo;
+            </p>
+          </div>
+        </dd>
+
+        <dt>
+          <span class="member-name">Nguyen Huy Thanh</span>
+          <span class="code-badge">ID: 106216227</span>
+          <span class="member-role-tag">Developer</span>
+        </dt>
+        <dd class="dd-contribution">
+          <strong>Contributions:</strong> Implemented the <code>about.html</code> page and its CSS layout.
+        </dd>
+        <dd class="dd-quote">
+          <div class="quote-box">
+            <blockquote class="quote-native" lang="ja">
+              <span class="quote-lang-tag">Japanese</span>
+              &ldquo;<span class="quote-native-text">世界に言われた通りのことをして、世界を変えた者などいない。</span>&rdquo;
+            </blockquote>
+            <p class="quote-translation">
+              <strong>English Translation:</strong> &ldquo;<span class="quote-en-text">No one has ever changed the world by doing what the world told them to do.</span>&rdquo;
+            </p>
+          </div>
+        </dd>
+
+        <dt>
+          <span class="member-name">Nguyen Phuong Anh</span>
+          <span class="code-badge">ID: 106249320</span>
+          <span class="member-role-tag">Developer (apply.html)</span>
+        </dt>
+        <dd class="dd-contribution">
+          <strong>Contributions:</strong> Implemented the job application form page (<code>apply.html</code>).
+        </dd>
+        <dd class="dd-quote">
+          <div class="quote-box">
+            <blockquote class="quote-native" lang="vi">
+              <span class="quote-lang-tag">Vietnamese</span>
+              &ldquo;<span class="quote-native-text">Học, học nữa, học m&atilde;i</span>&rdquo;
+            </blockquote>
+            <p class="quote-translation">
+              <strong>English Translation:</strong> &ldquo;<span class="quote-en-text">Learn, learn more, learn forever</span>&rdquo;
+            </p>
+          </div>
+        </dd>
+
+        <dt>
+          <span class="member-name">Truong Hoang Dat</span>
+          <span class="code-badge">ID: 106367141</span>
+          <span class="member-role-tag">Coder Page (apply.html)</span>
+        </dt>
+        <dd class="dd-contribution">
+          <strong>Contributions:</strong> Coded and styled the <code>apply.html</code> page color scheme and added visual images.
+        </dd>
+        <dd class="dd-quote">
+          <div class="quote-box">
+            <blockquote class="quote-native" lang="vi">
+              <span class="quote-lang-tag">Vietnamese</span>
+              &ldquo;<span class="quote-native-text">Kh&ocirc;ng bao giờ bỏ cuộc (Never give up)</span>&rdquo;
+            </blockquote>
+            <p class="quote-translation">
+              <strong>English Translation:</strong> &ldquo;<span class="quote-en-text">Failure is the mother of success.</span>&rdquo;
+            </p>
+          </div>
+        </dd>
+      </dl>
+    </section>
+
+    <!-- Fun Facts Table with Caption, Hex Colours & Hover Effects -->
+    <section class="about-section" aria-labelledby="fun-facts-caption">
+      <div tabindex="0" role="region" aria-labelledby="fun-facts-caption" class="table-wrapper">
+        <table class="fun-facts-table" id="fun-facts-table">
+          <caption id="fun-facts-caption">
+            Group G03 Member Fun Facts &mdash; Hometowns, Dream Jobs, Coding Snacks &amp; Off-Screen Hobbies
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Member Name</th>
+              <th scope="col">Student ID</th>
+              <th scope="col">Hometown</th>
+              <th scope="col">Dream Job</th>
+              <th scope="col">Favorite Coding Snack</th>
+              <th scope="col">Fun Fact / Hobby</th>
+            </tr>
+          </thead>
+          <tbody id="fun-facts-tbody">
+            <tr>
+              <th scope="row">Nguyen Le Quoc Bao</th>
+              <td><span class="code-badge">106245001</span></td>
+              <td>Hue, Viet Nam</td>
+              <td>University Lecturer</td>
+              <td>Nachos, crunchy rice cake</td>
+              <td>I love playing hard games</td>
+            </tr>
+            <tr>
+              <th scope="row">Dang Nhat Minh</th>
+              <td><span class="code-badge">106671774</span></td>
+              <td>Quy Nhon, Viet Nam</td>
+              <td>None</td>
+              <td>Chocolate</td>
+              <td>I have 4 cats</td>
+            </tr>
+            <tr>
+              <th scope="row">Nguyen Huy Thanh</th>
+              <td><span class="code-badge">106216227</span></td>
+              <td>Da Nang, Viet Nam</td>
+              <td>Senior Software Engineer</td>
+              <td>Tap Water</td>
+              <td>Playing games when there is nothing to do</td>
+            </tr>
+            <tr>
+              <th scope="row">Nguyen Phuong Anh</th>
+              <td><span class="code-badge">106249320</span></td>
+              <td>Quang Binh, Viet Nam</td>
+              <td>Coder</td>
+              <td>Milktea and snacks</td>
+              <td>Shopping</td>
+            </tr>
+            <tr>
+              <th scope="row">Truong Hoang Dat</th>
+              <td><span class="code-badge">106367141</span></td>
+              <td>Da Nang, Viet Nam</td>
+              <td>Coder AI Development</td>
+              <td>Milktea and Python</td>
+              <td>Coding</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Acknowledgement of Country & Indigenous / Regional Community Commitment -->
+    <section class="about-section" aria-labelledby="acknowledgement-heading">
+      <div class="section-bar">
+        <h2 id="acknowledgement-heading">Acknowledgement of Country &amp; Community Commitment (Viet Nam &amp; Australia)</h2>
+        <span class="section-bar-tag">Heritage &amp; Inclusion</span>
+      </div>
+
+      <div class="acknowledgement-card">
+        <p class="acknowledgement-lead">
+          As students of <strong>Swinburne University of Technology (Viet Nam &mdash; Da Nang Campus)</strong>, Group G03 and <strong>Susnium&trade; Clean Energy</strong> honour the local communities and ethnic heritage across <strong>Da Nang, Central Viet Nam, Ninh Thuan, and Hoa Binh</strong> where our clean energy projects operate, while respectfully acknowledging the <strong>Wurundjeri Woi-wurrung people of the Kulin Nation</strong> and <strong>Aboriginal and Torres Strait Islander peoples</strong> as the Traditional Custodians of Country across our Australian partner sites. We pay our deepest respects to Elders, ancestors, and community stewards past and present.
+        </p>
+
+        <div class="acknowledgement-columns">
+          <div class="quote-box">
+            <span class="quote-lang-tag">Why This Matters in Viet Nam &amp; Australia</span>
+            <p>
+              <strong>Local Land &amp; Ecological Stewardship:</strong> From wind and solar corridors in <strong>Ninh Thuan</strong> and hydroelectric basins in <strong>Hoa Binh, Viet Nam</strong> to solar farms in <strong>Victoria, Australia</strong>, renewable infrastructure depends directly on land, rivers, and coastlines cared for by local Vietnamese and Indigenous communities for generations. For Group G03, sustainable engineering means protecting cultural heritage, agricultural livelihoods, and co-designing regional grids with local and Traditional Owner communities.
+            </p>
+          </div>
+
+          <div class="quote-box">
+            <span class="quote-lang-tag">Inclusive Career Pathways</span>
+            <p>
+              <strong>Supporting Regional &amp; First Nations Talent:</strong> We actively welcome applications from engineers, researchers, and legal specialists from all regions and ethnic communities across <strong>Viet Nam</strong> as well as <strong>Aboriginal and Torres Strait Islander peoples</strong> across our <a href="jobs.html">open career roles</a>, supported by inclusive mentorship and accessible pathways via our <a href="apply.html">Application Portal</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <a href="https://student-team-aas2h8hq.atlassian.net/jira/software/projects/KAN/boards/1?filter=&groupBy=none&atlOrigin=eyJpIjoiZWYzYWZmYTBiNzQ3NDVjMjk1ZGU0ZjkwNWIyZmEzYTAiLCJwIjoiaiJ9">Jira Project</a> |
+    <a href="https://student-team-aas2h8hq.atlassian.net/jira/software/projects/KAN/boards/1?filter=&amp;groupBy=none&amp;atlOrigin=eyJpIjoiZWYzYWZmYTBiNzQ3NDVjMjk1ZGU0ZjkwNWIyZmEzYTAiLCJwIjoiaiJ9">Jira Project</a> |
     <a href="https://github.com/terminalgoat232/group-assignment">GitHub</a> |
-    <a href="mailto:info@g03energy.com">info@susnium.com</a>
-    <p> &copy 2026 Susnium Electric Company </p>
+    <a href="mailto:info@susnium.com">info@susnium.com</a>
+    <p>&copy; 2026 Susnium Electric Company</p>
   </footer>
+</body>
+
 </html>

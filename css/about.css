@@ -1,0 +1,391 @@
+@import "colorscheme.css";
+
+/* --- Page Shell & Responsive Grid Layout --- */
+.page-shell {
+  width: min(74rem, 100%);
+  margin-inline: auto;
+  padding: clamp(2rem, 4vw, 3.25rem) clamp(1rem, 4vw, 2.5rem);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ef-fg);
+}
+
+.page-shell h1 {
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-weight: 600;
+  margin-block-end: 0.45rem;
+}
+
+.about-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.18fr;
+  gap: 2rem;
+  margin-block-end: 3rem;
+}
+
+.about-section {
+  margin-block-end: 3rem;
+}
+
+.section-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--ef-bg3);
+  border: 2px solid var(--ef-bg4);
+  border-radius: 8px;
+  padding: 0.65rem 1.1rem;
+  margin-block-end: 1.25rem;
+}
+
+.section-bar h2 {
+  margin: 0;
+  color: var(--ef-bg-black);
+  font-size: 1.2rem;
+}
+
+.section-bar-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ef-green);
+  background-color: var(--ef-bg0);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--ef-bg4);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Group Nested List & Styled Student IDs --- */
+.group-nested-list {
+  list-style-type: square;
+  background-color: var(--ef-bg1);
+  border: 2px solid var(--ef-bg3);
+  border-radius: 10px;
+  padding: 1.35rem 1.35rem 1.35rem 2.25rem;
+}
+
+.group-nested-list > li {
+  margin-block-end: 1.15rem;
+  color: var(--ef-red);
+  font-weight: 600;
+  font-size: 1.02rem;
+}
+
+.group-nested-list > li:last-child {
+  margin-block-end: 0;
+}
+
+.group-nested-list ul {
+  list-style-type: disc;
+  margin-block-start: 0.45rem;
+  padding-inline-start: 1.4rem;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--ef-bg-black);
+}
+
+.group-nested-list ul li {
+  margin-block-end: 0.35rem;
+}
+
+.group-nested-list ul ul {
+  list-style-type: circle;
+  margin-block-start: 0.25rem;
+  color: var(--ef-fg);
+}
+
+.code-badge {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.12rem 0.55rem;
+  border-radius: 4px;
+  background-color: #e6e2cc;
+  color: #2b3236;
+  border: 1px solid #73830f;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Bordered Group Photo Figure & Caption --- */
+.group-photo-figure {
+  background-color: var(--ef-bg1);
+  border: 3px solid #2b3236;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.group-photo-figure img {
+  width: 100%;
+  border-radius: 8px;
+  aspect-ratio: 16 / 9.5;
+  object-fit: cover;
+  border: 2px solid var(--ef-bg4);
+}
+
+.group-photo-figure figcaption {
+  font-style: normal;
+  font-size: 0.88rem;
+  color: var(--ef-bg-black);
+  margin-block-start: 0.85rem;
+  padding: 0.5rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.photo-meta-pill {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.12rem 0.5rem;
+  border-radius: 4px;
+  background-color: var(--ef-bg2);
+  color: var(--ef-green);
+  border: 1px solid var(--ef-green);
+  margin-inline-end: 0.4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Member Contributions & Multilingual Quotes (Definition List) --- */
+.contributions-dl {
+  display: grid;
+  background-color: var(--ef-bg1);
+  border: 2px solid var(--ef-bg3);
+  border-radius: 10px;
+  padding-inline: 1.5rem;
+}
+
+.contributions-dl dt {
+  padding-block: 1.5rem 0.5rem;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--ef-bg-black);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.member-role-tag {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ef-cyan);
+  background-color: var(--ef-bg0);
+  border: 1px solid var(--ef-bg4);
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+}
+
+.contributions-dl dd {
+  color: var(--ef-fg);
+  font-size: 0.96rem;
+}
+
+.dd-contribution {
+  padding-block-end: 0.85rem;
+  max-width: 72ch;
+}
+
+.dd-quote {
+  padding-block-end: 1.5rem;
+  border-bottom: 1px dashed var(--ef-bg5);
+}
+
+.contributions-dl dd.dd-quote:last-of-type {
+  border-bottom: none;
+}
+
+.quote-box {
+  background-color: var(--ef-bg0);
+  border: 1px solid var(--ef-bg4);
+  border-radius: 6px;
+  padding: 0.85rem 1.1rem;
+  max-width: 70ch;
+}
+
+.quote-native {
+  font-style: italic;
+  color: var(--ef-bg-black);
+  font-weight: 600;
+  margin-block-end: 0.3rem;
+}
+
+.quote-translation {
+  font-size: 0.9rem;
+  color: var(--ef-fg-dim);
+}
+
+.quote-lang-tag {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ef-orange);
+  background-color: var(--ef-bg2);
+  padding: 0.08rem 0.45rem;
+  border-radius: 4px;
+  margin-inline-end: 0.45rem;
+}
+
+/* --- Acknowledgement of Country & Community Section --- */
+.acknowledgement-card {
+  background-color: var(--ef-bg1);
+  border: 2px solid var(--ef-bg3);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.acknowledgement-lead {
+  font-size: 1.02rem;
+  color: var(--ef-bg-black);
+  max-width: 74ch;
+  line-height: 1.65;
+}
+
+.acknowledgement-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.acknowledgement-columns .quote-box {
+  max-width: none;
+  display: grid;
+  align-content: start;
+  gap: 0.45rem;
+}
+
+.acknowledgement-columns a {
+  color: var(--ef-green);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* --- Fun Facts Table (Hex Colours & Hover Effects) --- */
+.table-wrapper {
+  overflow: auto;
+  max-inline-size: 100%;
+  max-block-size: min(540px, 80vh);
+  container-type: inline-size;
+  border: 2px solid #e6e2cc;
+  border-radius: 10px;
+  background-color: #f4f0d9;
+  padding: 0.75rem;
+}
+
+.fun-facts-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+  background-color: #f4f0d9;
+  color: #2b3236;
+}
+
+.fun-facts-table caption {
+  background-color: #dfa000;
+  color: #2b3236;
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 0.75rem 1.25rem;
+  text-align: left;
+  border-bottom: 2px solid #2b3236;
+  border-radius: 6px 6px 0 0;
+}
+
+.fun-facts-table th, .fun-facts-table td {
+  padding: 0.85rem 1rem;
+  border: none;
+  border-bottom: 1px solid #e0dcc7;
+  vertical-align: top;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.fun-facts-table thead th {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 1;
+  background-color: #e6e2cc;
+  color: #2b3236;
+  font-weight: 600;
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid #bdc3af;
+}
+
+.fun-facts-table tbody th[scope="row"] {
+  color: #2b3236;
+  font-weight: 600;
+  background-color: #efebd4;
+  white-space: nowrap;
+}
+
+.fun-facts-table tbody td {
+  background-color: #f4f0d9;
+  color: #5c6a72;
+}
+
+.fun-facts-table tbody tr:hover td,
+.fun-facts-table tbody tr:hover th[scope="row"] {
+  background-color: #fdf6e3;
+  color: #2b3236;
+}
+
+/* --- Responsive Container & Viewport Breakpoints --- */
+@container (max-width: 680px) {
+  .fun-facts-table {
+    --label-2: "Student ID";
+    --label-3: "Hometown";
+    --label-4: "Dream Job";
+    --label-5: "Coding Snack";
+    --label-6: "Fun Fact / Hobby";
+  }
+  .fun-facts-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .fun-facts-table, .fun-facts-table tbody, .fun-facts-table tr, .fun-facts-table th, .fun-facts-table td {
+    display: block;
+    width: 100%;
+  }
+  .fun-facts-table tbody tr {
+    border-bottom: 3px solid #e0dcc7;
+    padding-block: 0.5rem;
+    background-color: #fdf6e3;
+  }
+  .fun-facts-table tbody th[scope="row"] {
+    background-color: #e6e2cc;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+  .fun-facts-table td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid #efebd4;
+  }
+  .fun-facts-table td:nth-child(2)::before { content: var(--label-2) ": "; font-weight: 600; color: #2b3236; }
+  .fun-facts-table td:nth-child(3)::before { content: var(--label-3) ": "; font-weight: 600; color: #2b3236; }
+  .fun-facts-table td:nth-child(4)::before { content: var(--label-4) ": "; font-weight: 600; color: #2b3236; }
+  .fun-facts-table td:nth-child(5)::before { content: var(--label-5) ": "; font-weight: 600; color: #2b3236; }
+  .fun-facts-table td:nth-child(6)::before { content: var(--label-6) ": "; font-weight: 600; color: #2b3236; }
+}
+
+@media (max-width: 960px) {
+  .about-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
