@@ -57,8 +57,9 @@ nav {
 
 nav a:not(.logo-lnk) {
   padding: 0.6em;
-  color: var(--ef-bg);
+  color: var(--ef-bg-black);
   text-decoration: underline;
+  text-underline-offset: 0.5rem;
   text-decoration-color: transparent;
   transition: 
     text-decoration-color 0.5s ease, 
@@ -75,8 +76,8 @@ nav a:not(.logo-lnk):hover {
 }
 
 nav a[aria-current="page"] {
-  color: var(--ef-green);
-  text-decoration-color: var(--ef-green); 
+  color: var(--ef-fg-nav);
+  text-decoration-color: var(--ef-fg-nav); 
   font-weight: 520;
 }
 
@@ -141,6 +142,9 @@ nav a[aria-current="page"] {
   border: 2px solid var(--ef-bg2);
  }
 
+.desc-ctn > h1 {
+  line-height: 1.5em;
+}
 
 .energ-type-ctn {
   margin: 2rem 3em;
@@ -272,7 +276,7 @@ figcaption {
 
 /* --- table --- */
 .sv-label {
-  background-color: var(--ef-yellow-light);
+  background-color: var(--ef-red-light);
   color: var(--ef-bg0);
   width: 100%;
   text-align: center;
@@ -314,7 +318,7 @@ tbody td {
 .span-all {
   font-style: italic;
   color: var(--ef-bg0);
-  background-color: var(--ef-red-light);
+  background-color: #6b665a;
 }
 
 /* --- Footer --- */ 
