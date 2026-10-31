@@ -4,6 +4,9 @@
   width: min(74rem, 100%);
   margin-inline: auto;
   padding: clamp(2rem, 4vw, 3.25rem) clamp(1rem, 4vw, 2.5rem);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ef-fg);
 }
 
 .page-shell h1 {
@@ -293,6 +296,7 @@
 
 .fun-facts-table th, .fun-facts-table td {
   padding: 0.85rem 1rem;
+  border: none;
   border-bottom: 1px solid var(--ef-bg3);
   vertical-align: top;
 }
