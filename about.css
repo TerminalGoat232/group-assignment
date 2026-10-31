@@ -1,141 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap');
-
-:root {
-  --ef-bg0: #fdf6e3;
-  --ef-bg1: #f4f0d9;
-  --ef-bg2: #efebd4;
-  --ef-bg3: #e6e2cc;
-  --ef-bg4: #e0dcc7;
-  --ef-bg5: #bdc3af;
-  --ef-bg-black: #2b3236;
-  --ef-fg: #5c6a72;
-  --ef-fg-dim: #829181;
-  --ef-comment: #a6b0a0;
-  --ef-red-light: #f85552;
-  --ef-orange-light: #f57d26;
-  --ef-yellow-light: #dfa000;
-  --ef-green-light: #8da101;
-  --ef-cyan-light: #35a77c;
-  --ef-blue-light: #3a94c5;
-  --ef-purple-light: #df69ba;
-  --ef-red: #d34f4d;
-  --ef-orange: #b8662b;
-  --ef-yellow: #9b7615;
-  --ef-green: #73830f;
-  --ef-cyan: #338a6b;
-  --ef-blue: #3782ab;
-  --ef-purple: #b65c9c;
-}
-
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "IBM Plex Mono", monospace;
-}
-
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  scrollbar-color: var(--ef-bg5) var(--ef-bg1);
-}
-
-::selection {
-  background-color: var(--ef-purple-light);
-  color: var(--ef-bg0);
-}
-
-:focus-visible {
-  outline: 3px solid var(--ef-green);
-  outline-offset: 3px;
-}
-
-body {
-  font-size: 1.05rem;
-  line-height: 1.65;
-  color: var(--ef-fg);
-  background-color: var(--ef-bg0);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-
-h1, h2 {
-  text-wrap: balance;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-}
-
-h1 {
-  color: var(--ef-red);
-  font-size: clamp(1.85rem, 4vw, 2.75rem);
-  font-weight: 600;
-  margin-block-end: 1.25rem;
-}
-
-h2 {
-  color: var(--ef-bg-black);
-  font-size: clamp(1.3rem, 2.4vw, 1.65rem);
-  font-weight: 600;
-}
-
-p {
-  color: var(--ef-fg);
-  max-width: 72ch;
-}
-
-a {
-  color: var(--ef-blue);
-  text-underline-offset: 0.22em;
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
-}
-
-a:hover {
-  color: var(--ef-green);
-}
-
-.logo {
-  height: 50px;
-  width: auto;
-  display: block;
-}
-
-nav {
-  padding: 0.5rem 1rem;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  background-color: var(--ef-bg3);
-}
-
-nav a:not(.logo-lnk) {
-  padding: 0.6em;
-  color: var(--ef-bg-black);
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  transition: text-decoration-color 0.5s ease, color 0.2s ease, background-color 0.5s ease;
-  font-size: 1em;
-}
-
-nav a:not(.logo-lnk):hover {
-  border-radius: 5px;
-  background-color: var(--ef-bg2);
-  color: var(--ef-green);
-  text-decoration-color: var(--ef-green);
-}
-
-nav a[aria-current="page"] {
-  color: var(--ef-green);
-  text-decoration-color: var(--ef-green);
-  font-weight: 600;
-}
+@import "colorscheme.css";
 
 .page-shell {
   width: min(74rem, 100%);
   margin-inline: auto;
   padding: clamp(2rem, 4vw, 3.25rem) clamp(1rem, 4vw, 2.5rem);
+}
+
+.page-shell h1 {
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-weight: 600;
+  margin-block-end: 1.25rem;
 }
 
 .about-overview-grid {
@@ -164,6 +38,7 @@ nav a[aria-current="page"] {
 
 .section-bar h2 {
   margin: 0;
+  color: var(--ef-bg-black);
   font-size: 1.2rem;
 }
 
@@ -176,17 +51,6 @@ nav a[aria-current="page"] {
   border-radius: 4px;
   border: 1px solid var(--ef-bg4);
   font-variant-numeric: tabular-nums;
-}
-
-.sv-label {
-  background-color: var(--ef-yellow-light);
-  color: var(--ef-bg-black);
-  width: 100%;
-  text-align: center;
-  padding: 0.55em 0.85em;
-  border-radius: 8px;
-  font-size: 1.25rem;
-  margin-block: 0 1.25rem;
 }
 
 .group-nested-list {
@@ -250,9 +114,7 @@ nav a[aria-current="page"] {
 }
 
 .group-photo-figure img {
-  display: block;
   width: 100%;
-  height: auto;
   border-radius: 8px;
   aspect-ratio: 16 / 9.5;
   object-fit: cover;
@@ -500,42 +362,8 @@ nav a[aria-current="page"] {
   .fun-facts-table td:nth-child(6)::before { content: var(--label-6) ": "; font-weight: 600; color: var(--ef-bg-black); }
 }
 
-footer {
-  padding: 2rem;
-  text-align: center;
-  background-color: var(--ef-bg-black);
-  color: var(--ef-bg4);
-  font-size: 0.875rem;
-}
-
-footer a {
-  padding: 1.5rem;
-  color: inherit;
-  font-size: inherit;
-  text-decoration: none;
-}
-
-footer p {
-  color: inherit;
-  padding-top: 1.5rem;
-  margin-inline: auto;
-}
-
 @media (max-width: 960px) {
   .about-overview-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 680px) {
-  html {
-    font-size: 12px;
-  }
-  nav {
-    gap: 0;
-    padding: 0.25rem 0.5rem;
-  }
-  nav a:not(.logo-lnk) {
-    padding-top: 1em;
   }
 }
