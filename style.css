@@ -78,54 +78,63 @@ a:hover {
   outline-offset: 3px;
 }
 
+.logo {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
 nav {
-  padding: 0.65rem 1.25rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
   background-color: var(--ef-bg3);
-  border-bottom: 2px solid var(--ef-bg4);
 }
 
-nav a {
-  padding: 0.45em 0.75em;
+nav a:not(.logo-lnk) {
+  padding: 0.6em;
   color: var(--ef-fg-strong);
-  text-decoration: underline transparent;
-  transition: text-decoration-color 0.3s ease, color 0.2s ease, background-color 0.2s ease;
-  font-size: 1.05rem;
-  border-radius: 6px;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.5s ease, color 0.2s ease, background-color 0.5s ease;
+  font-size: 1em;
 }
 
-nav a:hover {
+nav a:not(.logo-lnk):hover {
+  border-radius: 5px;
+  background-color: var(--ef-bg2);
   color: var(--ef-green-ink);
   text-decoration-color: var(--ef-green-ink);
-  background-color: var(--ef-bg2);
 }
 
 nav a[aria-current="page"] {
   color: var(--ef-green-ink);
   text-decoration-color: var(--ef-green-ink);
-  background-color: var(--ef-bg1);
-  font-weight: 600;
+  font-weight: 520;
 }
 
 footer {
-  padding: 1.25rem 1rem;
+  padding: 2rem;
   text-align: center;
   background-color: var(--ef-fg-strong);
-  color: var(--ef-bg1);
-  font-size: 0.9rem;
+  color: var(--ef-bg4);
+  font-size: 0.875rem;
 }
 
-footer > a {
-  color: var(--ef-bg0);
-  font-weight: 600;
+footer a {
+  padding: 1.5rem;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
 }
 
-footer > a:hover {
-  color: var(--ef-yellow);
+footer p {
+  color: inherit;
+  padding-top: 1.5rem;
+  margin-inline: auto;
 }
 
 .bg-overlay {
