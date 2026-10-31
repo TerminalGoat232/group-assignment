@@ -89,7 +89,8 @@ nav a[aria-current="page"] {
       rgba(0, 0, 0, 0.15) 100%
     ), url('../images/hero_bg_overlay.jpeg');
   background-size: cover;
-  background-position: bottom;    
+  background-position: bottom;
+  min-height: 600px; 
 }
 
 /* --- hero ---*/
