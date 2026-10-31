@@ -1,5 +1,30 @@
 @import "colorscheme.css";
 
+/* --- High-Contrast Token Overrides for WAVE WCAG AA/AAA Compliance --- */
+:root {
+  --ef-bg-black: #1e2326;
+  --ef-bg: #1e2326;
+  --ef-fg: #2d383c;
+  --ef-fg-dim: #3d4b47;
+  --ef-red: #8c1d1b;
+  --ef-orange: #753706;
+  --ef-yellow: #5c4300;
+  --ef-green: #364904;
+  --ef-cyan: #124e39;
+  --ef-blue: #154663;
+  --ef-purple: #6e2558;
+}
+
+nav a:not(.logo-lnk) {
+  color: #1e2326;
+}
+
+nav a:not(.logo-lnk):hover,
+nav a[aria-current="page"] {
+  color: #364904;
+  text-decoration-color: #364904;
+}
+
 /* --- Page Shell & Responsive Grid Layout --- */
 .page-shell {
   width: min(85rem, 100%);
@@ -14,6 +39,15 @@
   font-size: 2.5rem;
   font-weight: 600;
   margin-block-end: 0.45rem;
+  color: var(--ef-red);
+}
+
+.page-shell .sv-label {
+  background-color: #dfa000;
+  color: #1e2326;
+  border-radius: 8px;
+  padding: 0.55em 0.85em;
+  margin-block: 0 1.25rem;
 }
 
 .about-overview-grid {
@@ -104,15 +138,15 @@
   padding: 0.12rem 0.55rem;
   border-radius: 4px;
   background-color: #e6e2cc;
-  color: #2b3236;
-  border: 1px solid #73830f;
+  color: #1e2326;
+  border: 1px solid #364904;
   font-variant-numeric: tabular-nums;
 }
 
 /* --- Bordered Group Photo Figure & Caption --- */
 .group-photo-figure {
   background-color: var(--ef-bg1);
-  border: 3px solid #2b3236;
+  border: 3px solid #1e2326;
   border-radius: 10px;
   padding: 1rem;
   display: flex;
@@ -292,17 +326,17 @@
   text-align: left;
   font-variant-numeric: tabular-nums;
   background-color: #f4f0d9;
-  color: #2b3236;
+  color: #1e2326;
 }
 
 .fun-facts-table caption {
   background-color: #dfa000;
-  color: #2b3236;
+  color: #1e2326;
   font-weight: 600;
   font-size: 1.5rem;
   padding: 0.75rem 1.25rem;
   text-align: left;
-  border-bottom: 2px solid #2b3236;
+  border-bottom: 2px solid #1e2326;
   border-radius: 6px 6px 0 0;
 }
 
@@ -319,7 +353,7 @@
   inset-block-start: 0;
   z-index: 1;
   background-color: #e6e2cc;
-  color: #2b3236;
+  color: #1e2326;
   font-weight: 600;
   font-size: 1.125rem;
   text-transform: uppercase;
@@ -328,7 +362,7 @@
 }
 
 .fun-facts-table tbody th[scope="row"] {
-  color: #2b3236;
+  color: #1e2326;
   font-weight: 600;
   background-color: #efebd4;
   white-space: nowrap;
@@ -336,13 +370,13 @@
 
 .fun-facts-table tbody td {
   background-color: #f4f0d9;
-  color: #5c6a72;
+  color: #2d383c;
 }
 
 .fun-facts-table tbody tr:hover td,
 .fun-facts-table tbody tr:hover th[scope="row"] {
   background-color: #fdf6e3;
-  color: #2b3236;
+  color: #1e2326;
 }
 
 /* --- Responsive Container & Viewport Breakpoints --- */
@@ -380,11 +414,11 @@
     padding: 0.65rem 1rem;
     border-bottom: 1px solid #efebd4;
   }
-  .fun-facts-table td:nth-child(2)::before { content: var(--label-2) ": "; font-weight: 600; color: #2b3236; }
-  .fun-facts-table td:nth-child(3)::before { content: var(--label-3) ": "; font-weight: 600; color: #2b3236; }
-  .fun-facts-table td:nth-child(4)::before { content: var(--label-4) ": "; font-weight: 600; color: #2b3236; }
-  .fun-facts-table td:nth-child(5)::before { content: var(--label-5) ": "; font-weight: 600; color: #2b3236; }
-  .fun-facts-table td:nth-child(6)::before { content: var(--label-6) ": "; font-weight: 600; color: #2b3236; }
+  .fun-facts-table td:nth-child(2)::before { content: var(--label-2) ": "; font-weight: 600; color: #1e2326; }
+  .fun-facts-table td:nth-child(3)::before { content: var(--label-3) ": "; font-weight: 600; color: #1e2326; }
+  .fun-facts-table td:nth-child(4)::before { content: var(--label-4) ": "; font-weight: 600; color: #1e2326; }
+  .fun-facts-table td:nth-child(5)::before { content: var(--label-5) ": "; font-weight: 600; color: #1e2326; }
+  .fun-facts-table td:nth-child(6)::before { content: var(--label-6) ": "; font-weight: 600; color: #1e2326; }
 }
 
 @media (max-width: 960px) {
