@@ -94,17 +94,29 @@ nav a[aria-current="page"] {
 }
 
 /* --- hero ---*/
-.hero_ctn {
+.hero-ctn {
   padding: clamp(3rem, 10vw, 8rem) 2rem; 
 }
-
-.hero_title {
+.hero-company {
+  font-size: 4rem;
+  color: var(--ef-bg2);
+}
+.hero-title {
   font-size: clamp(2rem, 7vw, 4.5rem);
   font-weight: 600;
   color: var(--ef-bg4);
   /* transition: letter-spacing 0.3s ease-out;*/
 }
 
+.hero-highlight {
+  all: inherit; 
+  background-color:var(--ef-green); 
+  display: inline-block;
+  width: fit-content;
+  padding: 0.1em 0.2em;
+  border-radius: 10px;
+  font-style:italic;
+}
 /*.hero_title:hover {
   letter-spacing: 0.5rem;
   transition: letter-spacing 0.3s ease;
@@ -113,18 +125,18 @@ nav a[aria-current="page"] {
 .content-ctn {
   justify-content: center;
   font-size: 1.5em;
-  padding: 8rem 2rem;
   display: flex;
   flex-wrap: wrap;
   max-width: 1700px;
-  margin:auto;
+  margin: 3em auto;
   row-gap: 2rem;          
 }
 
 .desc-ctn {
   background-color: var(--ef-bg1);
-  max-width:700px;
+  max-width:705px;
   padding: 1em 1em;
+  line-height: 1.6em;
   border-radius: 10px;
   border: 2px solid var(--ef-bg2);
  }

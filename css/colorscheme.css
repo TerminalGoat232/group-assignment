@@ -18,25 +18,25 @@
   --ef-bg-black:   #2b3236;
  
   /* --- Foregrounds --- */
-  --ef-fg:         #2c3d47;
-  --ef-fg-dim:     #455c44;
-  --ef-comment:    #5d6f51;
+  --ef-fg:         #5c6a72;
+  --ef-fg-dim:     #829181;
+  --ef-comment:    #a6b0a0;
  
   /* --- Accent colors (Light) --- */
-  --ef-red-light:        #d14441;  
-  --ef-orange-light:     #da6e21;
-  --ef-yellow-light:     #af7f04;
-  --ef-green-light:      #748502;
-  --ef-cyan-light:       #2a8764;
-  --ef-blue-light:       #2c749b;  
-  --ef-purple-light:     #ba559a;
+  --ef-red-light:        #f85552;  
+  --ef-orange-light:     #f57d26;
+  --ef-yellow-light:     #dfa000;
+  --ef-green-light:      #8da101;
+  --ef-cyan-light:       #35a77c;
+  --ef-blue-light:       #3a94c5;  
+  --ef-purple-light:     #df69ba;
 
   /* --- Accent colors ---*/
-  --ef-red:        #a93533;
-  --ef-orange:     #87491d;
-  --ef-yellow:     #7f6012;
-  --ef-green:      #58640d;
-  --ef-cyan:       #246d53;
-  --ef-blue:       #11567b;
-  --ef-purple:     #873b72;
+  --ef-red:        #d34f4d;
+  --ef-orange:     #b8662b;
+  --ef-yellow:     #9b7615;
+  --ef-green:      #73830f;
+  --ef-cyan:       #338a6b;
+  --ef-blue:       #3782ab;
+  --ef-purple:     #b65c9c;
 } 
