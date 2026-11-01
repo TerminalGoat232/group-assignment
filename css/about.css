@@ -15,16 +15,6 @@
   --ef-purple: #6e2558;
 }
 
-nav a:not(.logo-lnk) {
-  color: #1e2326;
-}
-
-nav a:not(.logo-lnk):hover,
-nav a[aria-current="page"] {
-  color: #364904;
-  text-decoration-color: #364904;
-}
-
 /* --- Page Shell & Responsive Grid Layout --- */
 .page-shell {
   width: min(85rem, 100%);

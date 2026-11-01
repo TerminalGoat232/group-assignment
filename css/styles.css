@@ -327,7 +327,7 @@ figcaption {
   padding: 0.6em 0em;
 }
 
-table {
+.catalog-table {
   display: table;
   border-collapse: collapse;
   padding: 0.5em;
