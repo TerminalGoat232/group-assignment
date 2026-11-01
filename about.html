@@ -21,7 +21,7 @@
   </style>
 </head>
 
-<body>
+<body id="top">
   <header>
     <nav>
       <a class="logo-lnk" href="index.html">
@@ -34,11 +34,21 @@
     </nav>
   </header>
 
-  <main class="page-shell">
-    <h1>About Us &middot; <span style="color: var(--ef-green); font-style: italic;">Group G03</span></h1>
-    <p class="about-subtitle">
-      Sustainable Energy Solutions Company &middot; COS10026 Web Technology Project Team Profile.
-    </p>
+  <main>
+    <!-- H1 -->
+    <div class="bg-overlay">
+      <!-- 1 Inline CSS -->
+      <section style="
+        width: 100%;
+        padding: clamp(3rem, 10vw, 8rem) 2rem;">
+        <h1>About Us &middot; Group G03</h1>
+      </section>
+    </div>
+
+    <div class="page-shell">
+      <p class="about-subtitle">
+        Sustainable Energy Solutions Company &middot; COS10026 Web Technology Project Team Profile.
+      </p>
 
     <!-- Group Dossier (Nested List) & Group Photo (Figure) -->
     <div class="about-overview-grid">
@@ -297,6 +307,7 @@
         </div>
       </div>
     </section>
+    </div>
   </main>
 
   <!-- To top button -->
