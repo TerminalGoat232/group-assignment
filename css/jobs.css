@@ -14,11 +14,6 @@ h1 {
         rgba(0, 0, 0, 0.60) 45%,
         rgba(0, 0, 0, 0.15) 100%
         ), url('../images/hydro-pwr.jpg');
-    background-size: cover;
-    background-position: bottom;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
 }
 
 /* Search bar */
