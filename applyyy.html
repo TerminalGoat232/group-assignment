@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
-    <!-- Nhận màu sắc & giao diện chung của nhóm -->
+    <!-- CSS chung của nhóm & CSS riêng cho trang apply -->
     <link rel="stylesheet" href="colorscheme.css">
     <link rel="stylesheet" href="apply.css">
 </head>
@@ -57,3 +57,46 @@
             <option value="WA">WA</option>
             <option value="SA">SA</option>
             <option value="TAS">TAS</option>
+            <option value="ACT">ACT</option>
+        </select><br><br>
+
+        <!-- Postcode -->
+        <label for="postcode">Postcode:</label>
+        <input type="text" id="postcode" name="postcode" pattern="[0-9]{4}" maxlength="4" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{8,12}" required><br><br>
+
+        <!-- Skill List -->
+        <fieldset>
+            <legend>Skill List</legend>
+            <label><input type="checkbox" name="skills[]" value="HTML"> HTML</label>
+            <label><input type="checkbox" name="skills[]" value="CSS"> CSS</label>
+            <label><input type="checkbox" name="skills[]" value="JavaScript"> JavaScript</label>
+            <label><input type="checkbox" name="skills[]" value="PHP"> PHP</label>
+        </fieldset><br>
+
+        <!-- Other Skills -->
+        <label for="otherskills">Other Skills:</label><br>
+        <textarea id="otherskills" name="otherskills" rows="4" cols="50"></textarea><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Apply">
+        <input type="reset" value="Reset">
+
+    </form>
+
+    <br><hr>
+
+    <!-- Acknowledgement of Country -->
+    <footer>
+        <p>We acknowledge the Aboriginal and Torres Strait Islander peoples as the Traditional Custodians of the land on which we work and learn, and pay our respects to Elders past, present, and emerging.</p>
+    </footer>
+
+</body>
+</html>
