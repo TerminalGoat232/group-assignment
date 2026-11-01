@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
     
-    <!-- Link CSS chung của nhóm & CSS riêng cho trang apply -->
+    <!-- Link đúng styles.css và apply.css theo yêu cầu -->
     <link rel="stylesheet" href="css/colorscheme.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/apply.css">
@@ -17,31 +17,26 @@
 
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
             
-            <!-- Job Reference Number -->
             <div class="form-group">
                 <label for="jobref">Job Reference Number:</label>
                 <input type="text" id="jobref" name="jobref" pattern="[A-Za-z0-9]{5}" required>
             </div>
 
-            <!-- First Name -->
             <div class="form-group">
                 <label for="firstname">First Name:</label>
                 <input type="text" id="firstname" name="firstname" maxlength="20" pattern="[A-Za-z\s]+" required>
             </div>
 
-            <!-- Last Name -->
             <div class="form-group">
                 <label for="lastname">Last Name:</label>
                 <input type="text" id="lastname" name="lastname" maxlength="20" pattern="[A-Za-z\s]+" required>
             </div>
 
-            <!-- Date of Birth -->
             <div class="form-group">
                 <label for="dob">Date of Birth:</label>
                 <input type="date" id="dob" name="dob" required>
             </div>
 
-            <!-- Gender -->
             <fieldset>
                 <legend>Gender</legend>
                 <label><input type="radio" name="gender" value="male" required> Male</label>
@@ -49,19 +44,16 @@
                 <label><input type="radio" name="gender" value="other" required> Other</label>
             </fieldset>
 
-            <!-- Street Address -->
             <div class="form-group">
                 <label for="street">Street Address:</label>
                 <input type="text" id="street" name="street" maxlength="40" required>
             </div>
 
-            <!-- Suburb / Town -->
             <div class="form-group">
                 <label for="suburb">Suburb / Town:</label>
                 <input type="text" id="suburb" name="suburb" maxlength="40" required>
             </div>
 
-            <!-- State -->
             <div class="form-group">
                 <label for="state">State:</label>
                 <select id="state" name="state" required>
@@ -77,25 +69,21 @@
                 </select>
             </div>
 
-            <!-- Postcode -->
             <div class="form-group">
                 <label for="postcode">Postcode:</label>
                 <input type="text" id="postcode" name="postcode" pattern="[0-9]{4}" maxlength="4" required>
             </div>
 
-            <!-- Email -->
             <div class="form-group">
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" required>
             </div>
 
-            <!-- Phone Number -->
             <div class="form-group">
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" pattern="[0-9]{8,12}" required>
             </div>
 
-            <!-- Skill List -->
             <fieldset>
                 <legend>Skill List</legend>
                 <label><input type="checkbox" name="skills[]" value="HTML"> HTML</label>
@@ -104,13 +92,11 @@
                 <label><input type="checkbox" name="skills[]" value="PHP"> PHP</label>
             </fieldset>
 
-            <!-- Other Skills -->
             <div class="form-group">
                 <label for="otherskills">Other Skills:</label>
                 <textarea id="otherskills" name="otherskills" rows="4"></textarea>
             </div>
 
-            <!-- Submit Button Group -->
             <div class="button-group">
                 <input type="submit" value="Apply">
                 <input type="reset" value="Reset">
@@ -119,7 +105,6 @@
         </form>
     </main>
 
-    <!-- Acknowledgement of Country -->
     <footer>
         <p>We acknowledge the Aboriginal and Torres Strait Islander peoples as the Traditional Custodians of the land on which we work and learn, and pay our respects to Elders past, present, and emerging.</p>
     </footer>
