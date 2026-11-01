@@ -1,6 +1,7 @@
 @import url("colorscheme.css");
+@import url("styles.css");
 
-/* Căn chỉnh khung Form Apply - Dùng 100% class và biến màu của nhóm */
+/* Căn chỉnh layout Form Apply - Thừa hưởng toàn bộ màu sắc từ file chung */
 main {
     max-width: 700px;
     margin: 40px auto;
@@ -79,9 +80,15 @@ input[type="reset"] {
     cursor: pointer;
 }
 
+.acknowledgement {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 0 15px;
+    font-size: 0.9rem;
+}
+
 footer {
     text-align: center;
-    margin-top: 40px;
     padding: 15px;
-    font-size: 0.9rem;
 }
