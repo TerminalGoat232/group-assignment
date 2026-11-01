@@ -42,6 +42,10 @@
   font-size: 1.25rem;
   line-height: 1.65;
   color: var(--ef-fg);
+  transform: translateY(200em);
+  animation:
+    slideInY 1s cubic-bezier(0.24, 0.76, 0, 1) both,
+    fadeIn 2s ease-out both;
 }
 
 .page-shell .sv-label {
