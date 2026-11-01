@@ -1,17 +1,21 @@
-/* Styling xịn cho Apply - Khớp màu colorscheme.css */
+@import url("colorscheme.css");
+
+/* Layout & Form Styling - 100% dùng biến màu CSS từ colorscheme.css */
 main {
     max-width: 750px;
     margin: 40px auto;
     padding: 30px;
-    background-color: var(--card-bg, #ffffff);
+    background-color: var(--card-bg, var(--bg-secondary, #1e1e1e));
+    color: var(--text-color, var(--text-primary, #ffffff));
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color, #333333);
 }
 
 main h1 {
     text-align: center;
     margin-bottom: 25px;
-    color: var(--primary-color, #ffffff);
+    color: var(--primary-color, var(--heading-color, #ffffff));
 }
 
 form {
@@ -28,7 +32,7 @@ form {
 
 label {
     font-weight: 600;
-    color: var(--text-color, #ffffff);
+    color: var(--text-color, var(--text-primary, #ffffff));
 }
 
 input[type="text"],
@@ -39,19 +43,29 @@ select,
 textarea {
     width: 100%;
     padding: 10px 12px;
-    border: 1px solid #555;
+    border: 1px solid var(--border-color, #555555);
     border-radius: 6px;
     font-size: 1rem;
     box-sizing: border-box;
-    background-color: #222;
-    color: #fff;
+    background-color: var(--input-bg, var(--bg-primary, #2a2a2a));
+    color: var(--input-text, var(--text-primary, #ffffff));
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--accent-color, var(--primary-color, #007bff));
+    outline: none;
 }
 
 fieldset {
-    border: 1px solid #444;
+    border: 1px solid var(--border-color, #444444);
     border-radius: 8px;
     padding: 15px 20px;
-    background-color: #1a1a1a;
+    background-color: var(--fieldset-bg, var(--bg-secondary, #252525));
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -60,7 +74,16 @@ fieldset {
 legend {
     font-weight: bold;
     padding: 0 8px;
-    color: #fff;
+    color: var(--primary-color, var(--text-primary, #ffffff));
+}
+
+fieldset label {
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-color, var(--text-primary, #ffffff));
 }
 
 .button-group {
@@ -78,16 +101,22 @@ input[type="reset"] {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    transition: opacity 0.2s;
 }
 
 input[type="submit"] {
-    background-color: #0056b3;
-    color: #ffffff;
+    background-color: var(--btn-primary-bg, var(--primary-color, #007bff));
+    color: var(--btn-primary-text, var(--text-on-primary, #ffffff));
 }
 
 input[type="reset"] {
-    background-color: #6c757d;
-    color: #ffffff;
+    background-color: var(--btn-secondary-bg, var(--secondary-color, #6c757d));
+    color: var(--btn-secondary-text, var(--text-on-secondary, #ffffff));
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    opacity: 0.85;
 }
 
 footer {
@@ -95,6 +124,6 @@ footer {
     margin-top: 40px;
     padding: 15px;
     font-size: 0.9rem;
-    color: #aaa;
-    border-top: 1px solid #333;
+    color: var(--text-muted, var(--text-secondary, #888888));
+    border-top: 1px solid var(--border-color, #333333);
 }
