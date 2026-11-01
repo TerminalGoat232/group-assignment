@@ -49,7 +49,7 @@
   </head>
   <body>
     <header>
-
+        <!-- Navigation bar -->
         <nav>
           <a class="logo-lnk" href="index.html">
             <img class="logo" src="images/logo_1.png" alt="Company Logo">
@@ -59,7 +59,7 @@
           <a href="apply.html">Join us</a>
           <a href="jobs.html">Jobs</a>
         </nav>
-
+        <!-- Page's hero section -->
         <div class = "bg-overlay">
           <section class="hero-ctn">
             <p class="hero-company"> Susnium Renewables</p>
@@ -81,7 +81,7 @@
     <main>
       <!-- A short description about the company-->
       <div class="content-ctn">
-        <div class="desc-ctn">
+        <div class="desc-ctn revealTriggerSlideInX">
           <h1> What do we actually do<span style="font-size:1.3em">?</span> </h1>
             <hr style=
                 "margin: 2rem 0rem; 
@@ -91,18 +91,19 @@
             >
             <p>Susnium&trade; designs, builds, and operates clean energy infrastructure around the world. Our projects range from <span class="rt-sol-txt">rooftop solar</span> for homes and businesses to utility-scale <span class="wind-txt">wind</span>, <span class="water-txt">hydro</span>, and <span class="nu-txt">nuclear</span> power plants. We stay with each project after it is built, using monitoring technology and a dedicated maintenance team to keep it running reliably. We also build the public websites and dashboards that let communities see how their local project is performing.</p>
         </div>
-          <!-- <div class="dummy"></div> -->
-        <ul class="energ-type-ctn" aria-label="Energy types we work with">
+        <ul 
+          class="energ-type-ctn revealTriggerSlideInX" 
+          aria-label="Energy types we work with">
             <li><i style="background-color:var(--ef-cyan-light)" class="tile nf nf-md-wind_power_outline" aria-hidden="true"></i></li>
             <li><i style="background-color:var(--ef-orange-light)" class="tile nf nf-md-solar_power_variant_outline" aria-hidden="true"></i></li>
             <li><i style="background-color:var(--ef-blue-light)" class="tile nf nf-md-waterfall" aria-hidden="true"></i></li>
             <li><i style="background-color:var(--ef-green-light)" class="tile nf nf-fae-atom" aria-hidden="true"></i></li>
         </ul>
 
-      <!-- An image suggesting how the operating site looks like-->
+      <!-- Image carousel for viewing multiple images -->
 
-      <h1 id="crs-title"> Our achievements </h1>
-      <ul class="img-carousel">
+      <h1 id="crs-title" class="revealTriggerSlideInY"> Our achievements </h1>
+      <ul class="img-carousel revealTriggerSlideInY">
         <li>
           <figure>
             <img 
@@ -150,8 +151,10 @@
       </ul>
    
       <!-- Table including various services-->
-      <table>
-        <caption><h2 class="sv-label"> Our top services </h2></caption>
+      <table class="revealTriggerSlideInY">
+        <caption>
+            <h2 class="table-title"> Our top services </h2>
+        </caption>
         <thead>
           <tr>
             <th scope="col">Area</th>
@@ -193,7 +196,11 @@
       </table>
 
       <!-- Search box -->
-      <form method="GET" action="search.html" target="_blank"> 
+      <form 
+        class="catalog-form revealTriggerSlideInY" 
+        method="GET" 
+        action="search.html" 
+        target="_blank"> 
         <h1> Find what you're looking for! </h1>
         <div class="form-inner-ctn">
           <label for="main-search" class="form-label">
@@ -210,9 +217,12 @@
             </button>
         </div>
       </form>
-
      </div>
     </main>
+
+    <!-- To top button -->
+    <a href="#top" class="to-top-button styled-submit">↑</a>
+
     <!-- The page's footer-->
     <footer>
       <a href="https://student-team-axpqzj74.atlassian.net/jira/software/projects/AWPP1G/boards/3?filter=&groupBy=none&atlOrigin=eyJpIjoiYjA0ZmYyMjYyY2RlNGM4ZmJhZjhlZjhlYjU2NjVkNWEiLCJwIjoiaiJ9">Jira Project</a> |

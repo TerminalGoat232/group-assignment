@@ -49,15 +49,15 @@ form {
     min-width: 0;
     width: auto;
     margin-bottom: 0;
-    padding: 0.6em 1em;
+    padding: 0.8em 1em;
 }
 
-.styled-submit {
-    flex: 0 0 auto;
-    margin-left: 0;
-    font-size: 1.25rem;
-    padding: 0.5em 0.8em;
-}
+/* .styled-submit { */
+/*     flex: 0 0 auto; */
+/*     margin-left: 0; */
+/*     font-size: 1.25rem; */
+/*     padding: 0.5em 0.8em; */
+/* } */
 
 .form-label {
     /* Hide the label visually but still allow screen reader to read */
