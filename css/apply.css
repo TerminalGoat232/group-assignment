@@ -1,4 +1,4 @@
-/* Styling xịn cho trang Apply - Dùng bảng màu chung của nhóm */
+/* Layout & Styling chuẩn màu colorscheme.css cho trang Apply */
 main {
     max-width: 750px;
     margin: 40px auto;
@@ -17,13 +17,13 @@ main h1 {
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
 }
 
-form > div {
+.form-group {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
 }
 
 label {
@@ -38,14 +38,14 @@ input[type="date"],
 select,
 textarea {
     width: 100%;
-    padding: 10px;
+    padding: 10px 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 1rem;
     box-sizing: border-box;
     background-color: var(--input-bg, #ffffff);
     color: var(--text-color, #000000);
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: border-color 0.2s;
 }
 
 input[type="text"]:focus,
@@ -56,13 +56,12 @@ select:focus,
 textarea:focus {
     border-color: var(--accent-color, #0056b3);
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
 }
 
 fieldset {
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 15px;
+    padding: 15px 20px;
     background-color: var(--fieldset-bg, #fafafa);
     display: flex;
     flex-wrap: wrap;
@@ -78,6 +77,9 @@ legend {
 fieldset label {
     font-weight: normal;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .button-group {
@@ -95,7 +97,6 @@ input[type="reset"] {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: opacity 0.2s;
 }
 
 input[type="submit"] {
@@ -110,7 +111,7 @@ input[type="reset"] {
 
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 footer {
