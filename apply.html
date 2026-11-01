@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="css/colorscheme.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/apply.css">
+    
 </head>
-<body>
+<body id="top">
 
     <header>
         <nav>
@@ -23,30 +24,54 @@
             <a href="jobs.html">Jobs</a>
         </nav>
     </header>
+    
+    <div class = "bg-overlay">
+        <!-- 1 Embedded CSS -->
+        <style>
+            .bg-overlay h1 {
+                text-align: center;
+                font-size: clamp(2rem, 7vw, 4.5rem);
+                text-wrap: balance;
+                font-weight: 600;
+                color: var(--ef-red);
+            }
+        </style>
+        <!-- 1 Inline CSS-->
+        <section style="
+        width: 100%;
+        padding: clamp(3rem, 10vw, 8rem) 2rem;">
+        <h1>Job Application Form</h1>
+        </section>
+    </div>  
 
     <main>
-        <h1>Job Application Form</h1>
-
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
             
             <div class="form-group">
                 <label for="jobref">Job Reference Number:</label>
-                <input type="text" id="jobref" name="jobref" pattern="[A-Za-z0-9]{5}" required>
+                <input type="text" id="jobref" name="jobref" pattern="[A-Za-z0-9]{5}" maxlength="5"
+                    title="Exactly 5 letters or numbers" required>
+                <span class="error-msg">Must be exactly 5 letters or numbers (e.g. AB123).</span>
             </div>
 
             <div class="form-group">
                 <label for="firstname">First Name:</label>
-                <input type="text" id="firstname" name="firstname" maxlength="20" pattern="[A-Za-z\s]+" required>
+                <input type="text" id="firstname" name="firstname" maxlength="20" pattern="[A-Za-z\s]+"
+                    title="Letters and spaces only" required>
+                <span class="error-msg">Letters and spaces only, up to 20 characters.</span>
             </div>
 
             <div class="form-group">
                 <label for="lastname">Last Name:</label>
-                <input type="text" id="lastname" name="lastname" maxlength="20" pattern="[A-Za-z\s]+" required>
+                <input type="text" id="lastname" name="lastname" maxlength="20" pattern="[A-Za-z\s]+"
+                    title="Letters and spaces only" required>
+                <span class="error-msg">Letters and spaces only, up to 20 characters.</span>
             </div>
 
             <div class="form-group">
                 <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" required>
+                <input type="date" id="dob" name="dob" max="2008-12-31" min="1940-01-01" required>
+                <span class="error-msg">Please enter a valid date of birth.</span>
             </div>
 
             <fieldset>
@@ -59,11 +84,13 @@
             <div class="form-group">
                 <label for="street">Street Address:</label>
                 <input type="text" id="street" name="street" maxlength="40" required>
+                <span class="error-msg">Street address is required (max 40 characters).</span>
             </div>
 
             <div class="form-group">
                 <label for="suburb">Suburb / Town:</label>
                 <input type="text" id="suburb" name="suburb" maxlength="40" required>
+                <span class="error-msg">Suburb or town is required (max 40 characters).</span>
             </div>
 
             <div class="form-group">
@@ -79,29 +106,36 @@
                     <option value="TAS">TAS</option>
                     <option value="ACT">ACT</option>
                 </select>
+                <span class="error-msg">Please choose a state.</span>
             </div>
 
             <div class="form-group">
                 <label for="postcode">Postcode:</label>
-                <input type="text" id="postcode" name="postcode" pattern="[0-9]{4}" maxlength="4" required>
+                <input type="text" id="postcode" name="postcode" pattern="[0-9]{4}" maxlength="4"
+                    inputmode="numeric" title="4 digits, e.g. 3122" required>
+                <span class="error-msg">Postcode must be exactly 4 digits (e.g. 3122).</span>
             </div>
 
             <div class="form-group">
                 <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" title="e.g. name@example.com" required>
+                <span class="error-msg">Enter a valid email address (e.g. name@example.com).</span>
             </div>
 
             <div class="form-group">
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{8,12}" required>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{8,12}" inputmode="numeric"
+                    title="8 to 12 digits, no spaces" required>
+                <span class="error-msg">Phone must be 8 to 12 digits, with no spaces or symbols.</span>
             </div>
 
             <fieldset>
                 <legend>Skill List</legend>
-                <label><input type="checkbox" name="skills[]" value="HTML"> HTML</label>
-                <label><input type="checkbox" name="skills[]" value="CSS"> CSS</label>
-                <label><input type="checkbox" name="skills[]" value="JavaScript"> JavaScript</label>
-                <label><input type="checkbox" name="skills[]" value="PHP"> PHP</label>
+                <label><input type="checkbox" name="skills[]" value="Software"> Software</label>
+                <label><input type="checkbox" name="skills[]" value="Hardware"> Hardware</label>
+                <label><input type="checkbox" name="skills[]" value="AI"> AI</label>
+                <label><input type="checkbox" name="skills[]" value="Multilingual"> Multilingual</label>
+                <label><input type="checkbox" name="skills[]" value="Managing"> Managing</label>
             </fieldset>
 
             <div class="form-group">
@@ -118,7 +152,7 @@
     </main>
 
     <!-- To top button -->
-    <a href="#top" class="to-top-button styled-submit">^</a>
+    <a href="#top" class="to-top-button styled-submit">↑</a>
 
     <!-- Footer giữ nguyên mẫu chuẩn của nhóm -->
     <footer>

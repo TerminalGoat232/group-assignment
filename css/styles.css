@@ -10,7 +10,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 1rem;
   scroll-behavior: smooth;
 }
 
@@ -23,7 +23,7 @@ h2 {
 }
 
 body {
-  font-size: 1.25rem; 
+  font-size: 1.125rem; 
   background-color: var(--ef-bg0);
   display: grid;
   grid-template-rows:auto 1fr auto;
@@ -98,7 +98,9 @@ nav a[aria-current="page"] {
     ), url('../images/hero_bg_overlay.jpeg');
   background-size: cover;
   background-position: bottom;
-  min-height: 600px; 
+  min-height: 500px; 
+  align-items: center;
+  display: flex;
   transform: translateY(100em);
   animation: slideInY 1s cubic-bezier(0.24, 0.76, 0, 1) forwards;
 }
@@ -167,6 +169,7 @@ nav a[aria-current="page"] {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5em;
   list-style: none;
+  align-self: center;
 
   transform: translateX(100em);
 }

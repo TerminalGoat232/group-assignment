@@ -3,15 +3,20 @@
 
 /* Căn chỉnh layout Form Apply - Thừa hưởng toàn bộ màu sắc từ file chung */
 main {
-    max-width: 700px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 30px;
     border-radius: 10px;
 }
 
-main h1 {
-    text-align: center;
-    margin-bottom: 25px;
+.bg-overlay {
+    background-image:
+        linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.85) 0%,
+        rgba(0, 0, 0, 0.60) 45%,
+        rgba(0, 0, 0, 0.15) 100%
+        ), url('../images/operating-site.jpg');
 }
 
 form {
@@ -79,13 +84,27 @@ input[type="reset"] {
     font-weight: bold;
     cursor: pointer;
 }
+.error-msg {
+    display: none;
+    font-size: 0.875rem;
+    color: var(--ef-red);
+}
 
-.acknowledgement {
-    text-align: center;
-    margin: 30px auto;
-    max-width: 800px;
-    padding: 0 15px;
-    font-size: 0.9rem;
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border-color: var(--ef-red);
+    background-color: color-mix(in srgb, var(--ef-red) 8%, white);
+}
+
+input:user-invalid + .error-msg,
+select:user-invalid + .error-msg {
+    display: block;
+}
+
+input:user-valid,
+select:user-valid {
+    border-color: var(--ef-green);
 }
 
 footer {
