@@ -24,8 +24,11 @@
     <main>
       <!-- H1 -->
       <div class = "bg-overlay">
-        <section class="h1_ctn">
-          <h1>Current Opening Jobs</h1>
+        <!-- 1 Inline CSS-->
+        <section style="
+          width: 100%;
+          padding: clamp(3rem, 10vw, 8rem) 2rem;">
+          <h1 >Current Opening Jobs</h1>
         </section>
       </div>
         <!-- Search bar -->
@@ -56,7 +59,8 @@
         <!-- 1 Embedded CSS-->
         <style>
           .job-info:has(details[open]) { 
-          border-color: var(--ef-green); 
+          border-color: var(--ef-green);
+          margin-bottom: 1em;
         }
         </style>
 
