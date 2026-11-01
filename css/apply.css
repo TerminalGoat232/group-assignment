@@ -1,17 +1,17 @@
-/* Styling giao diện Form trang Apply */
+/* Styling xịn cho trang Apply - Dùng bảng màu chung của nhóm */
 main {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 25px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--card-bg, #ffffff);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+main h1 {
     text-align: center;
     margin-bottom: 25px;
-    color: #1a1a1a;
+    color: var(--primary-color, #1a1a1a);
 }
 
 form {
@@ -20,10 +20,15 @@ form {
     gap: 15px;
 }
 
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 label {
     font-weight: 600;
-    margin-bottom: 3px;
-    display: block;
+    color: var(--text-color, #333333);
 }
 
 input[type="text"],
@@ -35,10 +40,12 @@ textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 1rem;
     box-sizing: border-box;
-    transition: border-color 0.2s ease-in-out;
+    background-color: var(--input-bg, #ffffff);
+    color: var(--text-color, #000000);
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 input[type="text"]:focus,
@@ -47,27 +54,36 @@ input[type="tel"]:focus,
 input[type="date"]:focus,
 select:focus,
 textarea:focus {
-    border-color: #0056b3;
+    border-color: var(--accent-color, #0056b3);
     outline: none;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
 }
 
 fieldset {
     border: 1px solid #ddd;
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 15px;
-    background-color: #fafafa;
+    background-color: var(--fieldset-bg, #fafafa);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 legend {
     font-weight: bold;
     padding: 0 8px;
-    color: #333;
+    color: var(--primary-color, #333333);
+}
+
+fieldset label {
+    font-weight: normal;
+    cursor: pointer;
 }
 
 .button-group {
     display: flex;
     gap: 15px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 input[type="submit"],
@@ -75,29 +91,26 @@ input[type="reset"] {
     flex: 1;
     padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: opacity 0.2s;
 }
 
 input[type="submit"] {
-    background-color: #0056b3;
-    color: #ffffff;
-}
-
-input[type="submit"]:hover {
-    background-color: #003d82;
+    background-color: var(--btn-primary-bg, #0056b3);
+    color: var(--btn-primary-text, #ffffff);
 }
 
 input[type="reset"] {
-    background-color: #6c757d;
-    color: #ffffff;
+    background-color: var(--btn-secondary-bg, #6c757d);
+    color: var(--btn-secondary-text, #ffffff);
 }
 
+input[type="submit"]:hover,
 input[type="reset"]:hover {
-    background-color: #495057;
+    opacity: 0.85;
 }
 
 footer {
